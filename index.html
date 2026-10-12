@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toghrul Aghabalazada | Sales Manager & Microsoft Solutions</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sales Manager at NOVUM Tech specializing in Microsoft Dynamics 365, Microsoft 365, Azure, and Power Platform solutions for B2B enterprises in Azerbaijan.">
+    <meta name="author" content="Toghrul Aghabalazada">
+    <meta name="theme-color" content="#0F172A">
+    <link rel="canonical" href="[ADD: canonical URL]">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via CDN for template preview) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        tech: {
+                            900: '#0F172A', // Deep slate
+                            800: '#1E293B',
+                            700: '#334155',
+                            blue: '#3B82F6',
+                            cyan: '#06B6D4',
+                            purple: '#8B5CF6',
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'tech-gradient': 'linear-gradient(to right, #3B82F6, #06B6D4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0F172A; color: #CBD5E1; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass-panel:hover { border-color: rgba(59, 130, 246, 0.5); box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); transition: all 0.3s ease; }
+        .text-gradient { background: linear-gradient(to right, #60A5FA, #22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        
+        /* Modern glowing timeline */
+        .timeline-line::before { content: ''; position: absolute; left: 7px; top: 2rem; bottom: 0; width: 2px; background: linear-gradient(to bottom, #3B82F6, rgba(59, 130, 246, 0.1)); z-index: 0; }
+        .timeline-dot { position: absolute; left: 0; top: 0.5rem; width: 16px; height: 16px; border-radius: 50%; background-color: #0F172A; border: 3px solid #3B82F6; box-shadow: 0 0 10px rgba(59,130,246,0.5); z-index: 10;}
+    </style>
+</head>
+<body id="top" class="font-sans antialiased selection:bg-tech-blue selection:text-white relative overflow-x-hidden">
+
+    <!-- Decorative background glow -->
+    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-tech-blue/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-tech-cyan/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+    <!-- Primary Navigation (Glassmorphism) -->
+    <header class="fixed w-full z-50 top-0 glass-panel border-b-0">
+        <nav aria-label="Main Navigation" class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+            <a href="#top" class="font-display font-bold text-xl text-white tracking-tight flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-sm">TA</div>
+                Toghrul Aghabalazada
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" id="desktop-nav">
+                <a href="#solutions" class="hover:text-white transition-colors">Solutions</a>
+                <a href="#value" class="hover:text-white transition-colors">Approach</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-white transition-colors">Capabilities</a>
+                <a href="#contact" class="px-5 py-2.5 bg-white text-tech-900 rounded-full hover:bg-slate-200 transition-colors font-semibold shadow-[0_0_15px_rgba(255,255,255,0.2)]">Contact Me</a>
+            </div>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" id="menu-icon-open">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-slate-700 px-6 py-4 space-y-2 absolute w-full">
+            <a href="#solutions" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Solutions</a>
+            <a href="#value" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Approach</a>
+            <a href="#experience" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Experience</a>
+            <a href="#skills" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Capabilities</a>
+            <a href="#contact" class="block py-3 text-sm font-bold text-tech-cyan">Contact Me</a>
+        </div>
+    </header>
+
+    <main id="main-content" class="relative z-10">
+        <!-- 1. Hero Section -->
+        <section aria-labelledby="hero-heading" class="pt-40 pb-20 md:pt-48 md:pb-32 relative">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <div class="w-full lg:w-3/5 text-center lg:text-left reveal">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 text-xs font-semibold text-slate-300 tracking-wide uppercase mb-6">
+                            <span class="w-2 h-2 rounded-full bg-tech-cyan animate-pulse"></span>
+                            Sales Manager at NOVUM Tech | Microsoft Solutions (Azerbaijan • UAE • Bahrain • Uzbekistan)
+                        </div>
+                        
+                        <h1 id="hero-heading" class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
+                            Driving <span class="text-gradient">Microsoft Cloud</span> & Dynamics 365 Adoption
+                        </h1>
+                        
+                        <p class="text-lg text-slate-400 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0 font-light">
+                            I help enterprises across <strong class="text-white font-medium">Azerbaijan, the UAE, Bahrain, and Uzbekistan</strong> adopt Dynamics 365, Microsoft 365, Azure, and Microsoft Fabric, from first demo to signed contract. Combining consultative discovery and commercial strategy, I connect operational challenges with scalable technology.
+                        </p>
+
+                        <!-- Regional Markets Served Pill Row -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6 text-xs">
+                            <span class="text-slate-500 font-semibold uppercase tracking-wider text-[11px] mr-1">Active Markets:</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                    <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#0092bc"/><rect y="200" width="1200" height="200" fill="#e4002b"/><rect y="400" width="1200" height="200" fill="#009639"/><circle cx="560" cy="300" r="90" fill="#fff"/><circle cx="588" cy="300" r="74" fill="#e4002b"/><polygon points="640,258 648,281 670,270 659,292 682,300 659,308 670,330 648,319 640,342 632,319 610,330 621,308 598,300 621,292 610,270 632,281" fill="#fff"/></svg>
+                                </span>
+                                Baku, Azerbaijan
+                            </span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                    <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#00732f"/><rect y="200" width="1200" height="200" fill="#fff"/><rect y="400" width="1200" height="200" fill="#000"/><rect width="300" height="600" fill="#f00"/></svg>
+                                </span>
+                                Dubai, UAE
+                            </span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                    <svg class="w-full h-full object-cover" viewBox="0 0 1000 600"><rect width="1000" height="600" fill="#ce1126"/><polygon points="0,0 260,0 360,60 260,120 360,180 260,240 360,300 260,360 360,420 260,480 360,540 260,600 0,600" fill="#fff"/></svg>
+                                </span>
+                                Manama, Bahrain
+                            </span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                    <svg class="w-full h-full object-cover" viewBox="0 0 1000 500"><rect width="1000" height="160" fill="#0099b5"/><rect y="160" width="1000" height="10" fill="#ce1126"/><rect y="170" width="1000" height="160" fill="#fff"/><rect y="330" width="1000" height="10" fill="#ce1126"/><rect y="340" width="1000" height="160" fill="#1eb53a"/><circle cx="120" cy="80" r="48" fill="#fff"/><circle cx="136" cy="80" r="40" fill="#0099b5"/><g fill="#fff"><circle cx="210" cy="40" r="7"/><circle cx="235" cy="40" r="7"/><circle cx="260" cy="40" r="7"/><circle cx="185" cy="80" r="7"/><circle cx="210" cy="80" r="7"/><circle cx="235" cy="80" r="7"/><circle cx="260" cy="80" r="7"/><circle cx="160" cy="120" r="7"/><circle cx="185" cy="120" r="7"/><circle cx="210" cy="120" r="7"/><circle cx="235" cy="120" r="7"/><circle cx="260" cy="120" r="7"/></g></svg>
+                                </span>
+                                Tashkent, Uzbekistan
+                            </span>
+                        </div>
+
+                        <!-- Languages Badge Row -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-10 text-xs font-medium">
+                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Azerbaijani (Native)</span>
+                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">English (Fluent)</span>
+                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Turkish (Fluent)</span>
+                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Russian (Fluent)</span>
+                        </div>
+                        
+                        <!-- Hero CTA Buttons -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                            <a href="[ADD: Calendly or booking URL]" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all transform hover:-translate-y-1">
+                                Book a 20-minute call
+                            </a>
+                            <a href="#solutions" class="px-8 py-4 bg-slate-800 text-white font-semibold rounded-full border border-slate-700 hover:bg-slate-700 transition-colors">
+                                Explore Solutions
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Portrait with Modern Glow -->
+                    <div class="w-full lg:w-2/5 flex justify-center lg:justify-end reveal delay-100">
+                        <div class="relative w-72 h-72 md:w-80 md:h-[400px] rounded-3xl overflow-hidden p-1 bg-gradient-to-br from-blue-500/30 to-purple-500/30">
+                            <img src="photo.jpg" alt="Toghrul Aghabalazada - Sales Manager" class="w-full h-full object-cover rounded-3xl bg-slate-800 filter grayscale hover:grayscale-0 transition-all duration-500">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Stat Strip Directly Under Hero -->
+        <section aria-label="Key Career Statistics" class="py-12 border-y border-slate-800 bg-slate-900/50">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 reveal">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
+                    <div class="glass-panel p-6 rounded-2xl">
+                        <p class="font-display text-4xl font-bold text-white mb-2">100<span class="text-tech-cyan">+</span></p>
+                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Corporate Clients Onboarded</p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl">
+                        <p class="font-display text-4xl font-bold text-white mb-2">10 <span class="text-tech-blue text-2xl">Yrs</span></p>
+                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">In B2B & Hospitality</p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl">
+                        <p class="font-display text-4xl font-bold text-white mb-2">4 <span class="text-tech-purple text-2xl">Langs</span></p>
+                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">AZ Native | EN, TR, RU</p>
+                    </div>
+                    <div class="glass-panel p-6 rounded-2xl flex flex-col justify-center">
+                        <p class="font-display text-lg font-bold text-tech-cyan mb-2">[ADD: certification]</p>
+                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Industry Validation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Global Reach, Local Insight Section -->
+        <section id="reach" aria-label="Global Reach, Local Insight" class="py-16 border-b border-slate-800 bg-slate-900/30 relative">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 reveal">
+                    <div>
+                        <p class="text-tech-cyan font-bold uppercase tracking-widest text-xs mb-2">Regional Operational Coverage</p>
+                        <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Global Reach, Local Insight</h2>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-xl font-light">
+                        Delivering cross-border enterprise licensing, Dynamics 365 scoping, and Microsoft cloud solutions across 4 key regional markets.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
+                    <!-- 1. Baku, Azerbaijan -->
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-blue-500/50 transition-all">
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <!-- Azerbaijan SVG Flag -->
+                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="1200" height="200" fill="#0092bc"/>
+                                    <rect y="200" width="1200" height="200" fill="#e4002b"/>
+                                    <rect y="400" width="1200" height="200" fill="#009639"/>
+                                    <circle cx="560" cy="300" r="90" fill="#ffffff"/>
+                                    <circle cx="588" cy="300" r="74" fill="#e4002b"/>
+                                    <polygon points="640,258 648,281 670,270 659,292 682,300 659,308 670,330 648,319 640,342 632,319 610,330 621,308 598,300 621,292 610,270 632,281" fill="#ffffff"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">Baku</h3>
+                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">Azerbaijan</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                            Primary operational headquarters. Advising local enterprises on Microsoft 365, Azure infrastructure, and Dynamics 365 Business Central deployments.
+                        </p>
+                    </div>
+
+                    <!-- 2. Dubai, United Arab Emirates -->
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-cyan-500/50 transition-all">
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <!-- UAE SVG Flag -->
+                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="1200" height="200" fill="#00732f"/>
+                                    <rect y="200" width="1200" height="200" fill="#ffffff"/>
+                                    <rect y="400" width="1200" height="200" fill="#000000"/>
+                                    <rect width="300" height="600" fill="#ff0000"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">Dubai</h3>
+                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">United Arab Emirates</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                            GCC enterprise hub. Scoping regional digital transformation initiatives, modern cloud migrations, and corporate volume licensing agreements.
+                        </p>
+                    </div>
+
+                    <!-- 3. Manama, Bahrain -->
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-purple-500/50 transition-all">
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <!-- Bahrain SVG Flag -->
+                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="1000" height="600" fill="#ce1126"/>
+                                    <polygon points="0,0 260,0 360,60 260,120 360,180 260,240 360,300 260,360 360,420 260,480 360,540 260,600 0,600" fill="#ffffff"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">Manama</h3>
+                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">Bahrain</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                            Gulf commercial center. Providing Microsoft cloud infrastructure advisory, Power Platform workflow automation, and enterprise licensing.
+                        </p>
+                    </div>
+
+                    <!-- 4. Tashkent, Uzbekistan -->
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/50 transition-all">
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <!-- Uzbekistan SVG Flag -->
+                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="1000" height="160" fill="#0099b5"/>
+                                    <rect y="160" width="1000" height="10" fill="#ce1126"/>
+                                    <rect y="170" width="1000" height="160" fill="#ffffff"/>
+                                    <rect y="330" width="1000" height="10" fill="#ce1126"/>
+                                    <rect y="340" width="1000" height="160" fill="#1eb53a"/>
+                                    <circle cx="120" cy="80" r="48" fill="#ffffff"/>
+                                    <circle cx="136" cy="80" r="40" fill="#0099b5"/>
+                                    <g fill="#ffffff">
+                                        <circle cx="210" cy="40" r="7"/><circle cx="235" cy="40" r="7"/><circle cx="260" cy="40" r="7"/>
+                                        <circle cx="185" cy="80" r="7"/><circle cx="210" cy="80" r="7"/><circle cx="235" cy="80" r="7"/><circle cx="260" cy="80" r="7"/>
+                                        <circle cx="160" cy="120" r="7"/><circle cx="185" cy="120" r="7"/><circle cx="210" cy="120" r="7"/><circle cx="235" cy="120" r="7"/><circle cx="260" cy="120" r="7"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-white">Tashkent</h3>
+                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">Uzbekistan</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                            Central Asian growth market. Guiding corporate organizations through ERP modernization, CRM implementation, and unified Fabric analytics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Microsoft Solutions I Work With Section -->
+        <section id="solutions" aria-labelledby="solutions-heading" class="py-24 relative">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="mb-16 text-center max-w-3xl mx-auto reveal">
+                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Technology Portfolio</p>
+                    <h2 id="solutions-heading" class="font-display text-4xl md:text-5xl font-bold text-white mb-6">Microsoft Solutions I Work With</h2>
+                    <p class="text-slate-400 text-lg font-light">
+                        Connecting enterprise business requirements with Microsoft cloud infrastructure, business applications, and modern workplace platforms.
+                    </p>
+                </div>
+
+                <!-- Dark Grid Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
+                    
+                    <!-- 1. Dynamics 365 -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Dynamics 365</h3>
+                        <p class="text-sm text-slate-400 font-light">I guide organizations through ERP and CRM evaluations (Business Central, Sales, Customer Service), defining scopes and leading demos.</p>
+                    </div>
+
+                    <!-- 2. Microsoft 365 -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Microsoft 365</h3>
+                        <p class="text-sm text-slate-400 font-light">I structure enterprise workplace licensing and deployment—enabling teams with secure collaborative tools including Teams and SharePoint.</p>
+                    </div>
+
+                    <!-- 3. Microsoft Azure -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-blue-400/20 text-blue-300 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Microsoft Azure</h3>
+                        <p class="text-sm text-slate-400 font-light">I help businesses architect and execute cloud migrations, optimizing server infrastructure, data security, and operational scalability.</p>
+                    </div>
+
+                    <!-- 4. Microsoft Fabric -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Microsoft Fabric</h3>
+                        <p class="text-sm text-slate-400 font-light">I assist enterprises in consolidating data estates into Microsoft Fabric—unifying data engineering, data warehousing, and real-time analytics in an all-in-one platform.</p>
+                    </div>
+
+                    <!-- 5. Power BI Consulting -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Power BI Consulting</h3>
+                        <p class="text-sm text-slate-400 font-light">I help business leaders transform fragmented operational data into interactive executive dashboards, enabling faster, data-driven decisions.</p>
+                    </div>
+
+                    <!-- 6. Data Warehouse -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-500 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Data Warehouse</h3>
+                        <p class="text-sm text-slate-400 font-light">I assist organizations in centralizing disparate data sources into modern enterprise repositories and structured reporting architectures.</p>
+                    </div>
+
+                    <!-- 7. Artificial Intelligence & IoT -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Artificial Intelligence & IoT</h3>
+                        <p class="text-sm text-slate-400 font-light">I introduce applied cognitive AI, Copilot, and smart IoT integrations into commercial operations to automate manual processes.</p>
+                    </div>
+
+                    <!-- 8. Software Development -->
+                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <h3 class="font-bold text-xl text-white mb-3">Software Development</h3>
+                        <p class="text-sm text-slate-400 font-light">I coordinate tailored enterprise application development, aligning modern architecture and business requirements into production-ready software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. How I Create Business Value Section -->
+        <section id="value" aria-labelledby="value-heading" class="py-24 relative bg-slate-900/50 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="mb-16 text-center max-w-3xl mx-auto reveal">
+                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Commercial Approach</p>
+                    <h2 id="value-heading" class="font-display text-4xl md:text-5xl font-bold text-white mb-6">How I Create Business Value</h2>
+                    <p class="text-slate-400 text-lg font-light">
+                        A structured methodology for qualifying opportunities, aligning technology with strategic goals, and delivering sustainable enterprise outcomes.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
+                    <!-- Cards -->
+                    <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-red-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="text-sm font-bold text-slate-500 mb-4">01.</span>
+                        <h3 class="font-display font-bold text-2xl text-white mb-3">Discover</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Thoroughly assess customer business challenges, current IT architecture, operational pain points, and strategic commercial objectives.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-cyan-400 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="text-sm font-bold text-slate-500 mb-4">02.</span>
+                        <h3 class="font-display font-bold text-2xl text-white mb-3">Recommend</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Map specific Microsoft technologies and Novum solutions to operational needs, outlining clear ROI, licensing models, and deployment scope.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-green-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="text-sm font-bold text-slate-500 mb-4">03.</span>
+                        <h3 class="font-display font-bold text-2xl text-white mb-3">Develop</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Structure enterprise proposals, coordinate proof-of-concept demos with technical architects, align executive stakeholders, and negotiate agreements.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="text-sm font-bold text-slate-500 mb-4">04.</span>
+                        <h3 class="font-display font-bold text-2xl text-white mb-3">Grow</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                            Nurture executive client relationships, ensure post-deployment satisfaction, and identify continuous workload optimization opportunities.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Secondary CTA -->
+                <div class="mt-16 glass-panel rounded-3xl p-10 flex flex-col sm:flex-row items-center justify-between gap-8 reveal">
+                    <div>
+                        <h3 class="font-display text-2xl font-bold text-white mb-2">Have a project? Let's talk.</h3>
+                        <p class="text-slate-400 font-light">Explore Dynamics 365 scoping, cloud licensing optimization, or digital workplace transformation.</p>
+                    </div>
+                    <a href="#contact" class="px-8 py-3 bg-white text-tech-900 font-bold rounded-full hover:bg-slate-200 transition-colors whitespace-nowrap">
+                        Let's Talk
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Professional Experience Section -->
+        <section id="experience" aria-labelledby="experience-heading" class="py-24 relative border-t border-slate-800">
+            <div class="max-w-4xl mx-auto px-6 md:px-12">
+                <div class="mb-16 reveal text-center md:text-left">
+                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Track Record</p>
+                    <h2 id="experience-heading" class="font-display text-4xl font-bold text-white">Professional Experience</h2>
+                    <p class="text-slate-400 mt-4 max-w-3xl leading-relaxed font-light">
+                        Over 10 years of commercial and customer relationship experience—spanning enterprise B2B Microsoft solutions sales, high-value corporate travel partnerships, and client service management.
+                    </p>
+                </div>
+                
+                <div class="relative timeline-line space-y-10 ml-2 md:ml-0">
+                    <!-- 1. NOVUM Tech -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-tech-cyan/50 transition-colors">
+                                        <img src="logos/novum.png" alt="NOVUM Tech" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Sales Manager</h3>
+                                        <h4 class="text-tech-cyan font-semibold text-sm sm:text-base mt-1">NOVUM Tech</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-300 tracking-wider whitespace-nowrap self-start sm:self-center">May 2026 – Present</span>
+                            </div>
+                            <p class="text-slate-300 leading-relaxed font-light mb-3">
+                                Identifying enterprise B2B opportunities, advising on Microsoft volume licensing, presenting business transformation solutions, and coordinating Dynamics 365 ERP/CRM demonstrations. Focused on helping enterprises across Azerbaijan, UAE, Bahrain, and Uzbekistan modernize their operations through the Microsoft ecosystem.
+                            </p>
+                            <ul class="space-y-2 text-sm text-slate-400 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>B2B enterprise solution scoping for Dynamics 365 (Business Central & Sales) and Power Platform.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Advising corporate accounts on Microsoft 365, Azure cloud migration, and volume licensing agreements.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2. YIĞIM -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #06B6D4; box-shadow: 0 0 10px rgba(6,182,212,0.4);"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-tech-blue/50 transition-colors">
+                                        <img src="logos/yigim.svg" alt="YIĞIM" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Corporate Sales Manager</h3>
+                                        <h4 class="text-tech-blue font-semibold text-sm sm:text-base mt-1">YIĞIM</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">Feb 2025 – Apr 2026</span>
+                            </div>
+                            <p class="text-slate-300 leading-relaxed font-light mb-3">
+                                Directed end-to-end B2B sales cycles, onboarding over 100 corporate clients across hospitality, retail, and service sectors. Conducted solution presentations, negotiated enterprise contracts, and collaborated with cross-functional technical teams to deliver seamless client integrations.
+                            </p>
+                            <ul class="space-y-2 text-sm text-slate-400 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Onboarded 100+ corporate clients through consultative sales discovery and personalized product demonstrations.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Led commercial contract negotiations and closed enterprise service agreements.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. Silk Row Travel -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #60A5FA;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-blue-400/50 transition-colors">
+                                        <img src="logos/silkrow.svg" alt="Silk Row Travel" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Corporate Sales Manager</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Silk Row Travel</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">07.08.2023 – 12.02.2025</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Led corporate sales initiatives and cultivated long-term client relationships across enterprise accounts.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Developed and managed a portfolio of corporate clients, leading to a <strong class="text-white font-medium">20% increase</strong> in business travel bookings within the first year.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Negotiated and secured long-term contracts with key corporate clients, contributing to <strong class="text-white font-medium">20% growth</strong> in annual revenue.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 4. PASHA Travel -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #60A5FA;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-emerald-500/50 transition-colors">
+                                        <img src="logos/pashatravel.svg" alt="PASHA Travel" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Partnership Specialist</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">PASHA Travel</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">13.06.2022 – 06.08.2023</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Progressed from partnership coordinator to specialist, overseeing vendor sourcing, price negotiation, contract management, and inventory control.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Collaborated with the sales department to optimize the overall sales process.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Implemented cost-saving measures through supplier negotiations and process improvements, resulting in an <strong class="text-white font-medium">18% reduction</strong> in procurement costs.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 5. PMD Hospitality -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-slate-500 transition-colors">
+                                        <img src="logos/pmd.png" alt="PMD Hospitality" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Reservation Agent</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">PMD Hospitality</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">17.07.2021 – 16.06.2022</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Streamlined room and amenity reservations process, ensuring timely delivery and customer satisfaction. Ensured timely and efficient reservation fulfilment with front desk and housekeeping teams.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Provided exceptional customer service by handling inquiries, resolving issues, and exceeding guest expectations.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 6. Baku Marriott Hotel Boulevard -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-red-500/50 transition-colors">
+                                        <img src="logos/marriott.svg" alt="Baku Marriott Hotel Boulevard" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Guest Service Agent</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Baku Marriott Hotel Boulevard</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">17.07.2019 – 17.07.2021</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Provided exceptional customer service, addressing inquiries, requests, and concerns professionally.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Managed check-in/check-out processes, reservations, and offered information on hotel amenities and local attractions.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 7. Hard Rock Cafe Baku -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-amber-500/50 transition-colors">
+                                        <img src="logos/hardrock.svg" alt="Hard Rock Cafe Baku" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl font-bold text-white leading-tight">HOST / RSA</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Hard Rock Cafe Baku</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">20.07.2018 – 17.07.2019</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Provided exceptional customer service, managing guest reception, seating, and reservation coordination in a high-volume environment.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Addressed guest requests professionally and upheld international brand service standards.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 8. Islamic Solidarity Games -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-cyan-400/50 transition-colors">
+                                        <img src="logos/baku2017.svg" alt="Islamic Solidarity Games (Baku 2017)" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Guest Service Agent</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Islamic Solidarity Games (Baku 2017)</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">01.04.2017 – 30.06.2017</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Welcomed international sports delegations and VIP attendees, coordinating arrivals, logistical transfers, and accommodation schedules.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Delivered multilingual customer service and on-site issue resolution during major international sporting operations.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 9. Frriends Cafe -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 class="font-display text-xl font-bold text-white">Sales Coordinator</h3>
+                                    <h4 class="text-slate-300 font-semibold mt-1">Frriends Cafe</h4>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">19.09.2016 – 31.03.2017</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>In direct touch with clients, managed reservations for private events, provided detailed menu information, and coordinated with kitchen staff.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 10. Qafqaz Point Boutique Hotel -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-1.5 sm:p-2 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-yellow-500/50 transition-colors">
+                                        <img src="logos/qafqaz.png" alt="Qafqaz Point Boutique Hotel" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Sales Coordinator</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Qafqaz Point Boutique Hotel</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">03.04.2016 – 15.09.2016</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Executed a data-driven sales approach, implementing a CRM system that increased customer acquisition by <strong class="text-white font-medium">25%</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Managed corporate account inquiries, conducted follow-ups, and coordinated room booking contracts.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 11. Caspian Business Hotel -->
+                    <div class="relative pl-10 md:pl-12 reveal">
+                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
+                                <div class="flex items-center gap-3.5 sm:gap-4">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-amber-400/50 transition-colors">
+                                        <img src="logos/caspian.svg" alt="Caspian Business Hotel" class="max-w-full max-h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Sales Coordinator</h3>
+                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Caspian Business Hotel</h4>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">04.03.2015 – 29.02.2016</span>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Played a key role in developing and executing effective sales strategies and promotional campaigns to boost revenue and maximize occupancy rates.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span>Engaged corporate accounts and coordinated group booking agreements.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Skills, Education & Languages -->
+        <section id="skills" class="py-24 bg-slate-900/50 border-y border-slate-800">
+            <div class="max-w-7xl mx-auto px-6 md:px-12">
+                <div class="mb-16 reveal text-center md:text-left">
+                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Capabilities</p>
+                    <h2 class="font-display text-4xl font-bold text-white">Skills, Education & Languages</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Core Competencies & Software -->
+                    <div class="glass-panel p-10 rounded-3xl reveal">
+                        <h3 class="font-display text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-tech-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                            Core Competencies
+                        </h3>
+                        <div class="flex flex-wrap gap-3 mb-10">
+                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">B2B Solution Selling</span>
+                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Enterprise Account Management</span>
+                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Contract Negotiation</span>
+                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Commercial Strategy</span>
+                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">ERP / CRM Demo Coordination</span>
+                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Cross-Functional Leadership</span>
+                        </div>
+
+                        <h3 class="font-display text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-tech-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                            Technology Platforms
+                        </h3>
+                        <ul class="space-y-4 text-sm text-slate-400 font-light">
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-tech-blue shadow-[0_0_8px_#3B82F6]"></div>
+                                <span>Microsoft Dynamics 365 (Business Central & CRM applications)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-tech-cyan shadow-[0_0_8px_#06B6D4]"></div>
+                                <span>Power Platform (Power BI, Power Apps, Power Automate)</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_#EF4444]"></div>
+                                <span>Microsoft 365 Enterprise Licensing & Modern Workplace</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_#22C55E]"></div>
+                                <span>CRM Platforms (Salesforce, HubSpot)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Education & Languages -->
+                    <div class="glass-panel p-10 rounded-3xl reveal delay-100 flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display text-2xl font-bold text-white mb-6">Education</h3>
+                            <div class="mb-10 bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                                <h4 class="font-bold text-white text-lg">Azerbaijan Tourism and Management University</h4>
+                                <p class="text-slate-400 mt-2 font-light">Bachelor of Business Management (2013–2017)</p>
+                            </div>
+
+                            <h3 class="font-display text-2xl font-bold text-white mb-6">Languages</h3>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                                    <strong class="text-white block mb-1">Azerbaijani</strong> 
+                                    <span class="text-tech-cyan">Native</span>
+                                </div>
+                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                                    <strong class="text-white block mb-1">English</strong> 
+                                    <span class="text-slate-400">Fluent</span>
+                                </div>
+                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                                    <strong class="text-white block mb-1">Turkish</strong> 
+                                    <span class="text-slate-400">Fluent</span>
+                                </div>
+                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                                    <strong class="text-white block mb-1">Russian</strong> 
+                                    <span class="text-slate-400">Fluent</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 pt-6 border-t border-slate-800 text-xs text-slate-500 font-light">
+                            <p>Continuous professional development in B2B enterprise technology, commercial contract management, and Microsoft cloud solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Contact Section -->
+        <section id="contact" class="py-32 relative">
+            <div class="max-w-4xl mx-auto px-6 md:px-12 text-center reveal">
+                <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-4">Initiate Conversation</p>
+                <h2 class="font-display text-5xl md:text-6xl font-bold text-white mb-6">Let's Discuss Solutions</h2>
+                <p class="text-slate-400 text-lg font-light mb-12">
+                    Whether you are evaluating Microsoft software licensing, planning an ERP implementation, or exploring new enterprise opportunities, I welcome meaningful professional dialogue.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
+                    <a href="[ADD: Calendly or booking URL]" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all">
+                        Book a 20-minute call
+                    </a>
+                    <a href="mailto:[ADD: name@yourdomain]" class="px-8 py-4 bg-slate-800 text-white font-semibold rounded-full border border-slate-700 hover:bg-slate-700 transition-colors">
+                        Send an Email
+                    </a>
+                </div>
+
+                <!-- Footer style links inside contact -->
+                <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-400 font-light pt-12 border-t border-slate-800">
+                    <a href="[ADD: cv.pdf]" download class="hover:text-tech-cyan transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                        Download CV
+                    </a>
+                    <a href="https://www.linkedin.com/in/toghrul-aghabalazada-26249719a/" target="_blank" class="hover:text-tech-cyan transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    <div class="flex items-center gap-3 flex-wrap justify-center">
+                        <span class="inline-flex items-center gap-1.5 text-slate-300">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#0092bc"/><rect y="200" width="1200" height="200" fill="#e4002b"/><rect y="400" width="1200" height="200" fill="#009639"/><circle cx="560" cy="300" r="90" fill="#fff"/><circle cx="588" cy="300" r="74" fill="#e4002b"/><polygon points="640,258 648,281 670,270 659,292 682,300 659,308 670,330 648,319 640,342 632,319 610,330 621,308 598,300 621,292 610,270 632,281" fill="#fff"/></svg>
+                            </span>
+                            Baku, Azerbaijan
+                        </span>
+                        <span class="text-slate-600">•</span>
+                        <span class="inline-flex items-center gap-1.5 text-slate-300">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#00732f"/><rect y="200" width="1200" height="200" fill="#fff"/><rect y="400" width="1200" height="200" fill="#000"/><rect width="300" height="600" fill="#f00"/></svg>
+                            </span>
+                            Dubai, UAE
+                        </span>
+                        <span class="text-slate-600">•</span>
+                        <span class="inline-flex items-center gap-1.5 text-slate-300">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1000 600"><rect width="1000" height="600" fill="#ce1126"/><polygon points="0,0 260,0 360,60 260,120 360,180 260,240 360,300 260,360 360,420 260,480 360,540 260,600 0,600" fill="#fff"/></svg>
+                            </span>
+                            Manama, Bahrain
+                        </span>
+                        <span class="text-slate-600">•</span>
+                        <span class="inline-flex items-center gap-1.5 text-slate-300">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                                <svg class="w-full h-full object-cover" viewBox="0 0 1000 500"><rect width="1000" height="160" fill="#0099b5"/><rect y="160" width="1000" height="10" fill="#ce1126"/><rect y="170" width="1000" height="160" fill="#fff"/><rect y="330" width="1000" height="10" fill="#ce1126"/><rect y="340" width="1000" height="160" fill="#1eb53a"/><circle cx="120" cy="80" r="48" fill="#fff"/><circle cx="136" cy="80" r="40" fill="#0099b5"/><g fill="#fff"><circle cx="210" cy="40" r="7"/><circle cx="235" cy="40" r="7"/><circle cx="260" cy="40" r="7"/><circle cx="185" cy="80" r="7"/><circle cx="210" cy="80" r="7"/><circle cx="235" cy="80" r="7"/><circle cx="260" cy="80" r="7"/><circle cx="160" cy="120" r="7"/><circle cx="185" cy="120" r="7"/><circle cx="210" cy="120" r="7"/><circle cx="235" cy="120" r="7"/><circle cx="260" cy="120" r="7"/></g></svg>
+                            </span>
+                            Tashkent, Uzbekistan
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-8 bg-slate-900 border-t border-slate-800 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>Personal website. Not affiliated with or endorsed by Microsoft Corporation.</p>
+            <p>&copy; 2026 Toghrul Aghabalazada. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Hide mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // IntersectionObserver for Reveal Animations
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
