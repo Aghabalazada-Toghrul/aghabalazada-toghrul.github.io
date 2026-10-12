@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Circular Luxury Crest Background -->
+  <circle cx="60" cy="60" r="56" fill="#0C192E" stroke="#C5A059" stroke-width="2.5"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#C5A059" stroke-width="1" stroke-dasharray="2,3"/>
+
+  <!-- Hotel Crown -->
+  <path d="M48 35 L52 42 L60 33 L68 42 L72 35 L74 46 L46 46 Z" fill="#C5A059"/>
+  <circle cx="48" cy="33.5" r="1.5" fill="#E8D19B"/>
+  <circle cx="60" cy="31.5" r="1.8" fill="#E8D19B"/>
+  <circle cx="72" cy="33.5" r="1.5" fill="#E8D19B"/>
+
+  <!-- Monogram: CBH -->
+  <text x="60" y="66" font-family="'Cinzel', 'Playfair Display', 'Georgia', serif" font-size="21" font-weight="bold" fill="#E8D19B" text-anchor="middle" letter-spacing="1.5">CBH</text>
+
+  <!-- Divider Line with Diamond -->
+  <line x1="38" y1="72" x2="82" y2="72" stroke="#C5A059" stroke-width="1"/>
+  <polygon points="60,69.5 62.5,72 60,74.5 57.5,72" fill="#E8D19B"/>
+
+  <!-- Subtitle Text -->
+  <text x="60" y="82" font-family="'Inter', 'Segoe UI', sans-serif" font-size="6.5" font-weight="600" fill="#FFFFFF" text-anchor="middle" letter-spacing="2.5">CASPIAN</text>
+  <text x="60" y="90" font-family="'Inter', 'Segoe UI', sans-serif" font-size="5" font-weight="500" fill="#C5A059" text-anchor="middle" letter-spacing="1.8">BUSINESS HOTEL</text>
+
+  <!-- Stars -->
+  <g fill="#E8D19B" transform="translate(60, 97)">
+    <polygon points="0,-2.5 0.7,-0.7 2.5,-0.7 1.1,0.4 1.6,2.2 0,1.1 -1.6,2.2 -1.1,0.4 -2.5,-0.7 -0.7,-0.7"/>
+    <polygon points="-7,-2.5 -6.3,-0.7 -4.5,-0.7 -5.9,0.4 -5.4,2.2 -7,1.1 -8.6,2.2 -8.1,0.4 -9.5,-0.7 -7.7,-0.7"/>
+    <polygon points="7,-2.5 7.7,-0.7 9.5,-0.7 8.1,0.4 8.6,2.2 7,1.1 5.4,2.2 5.9,0.4 4.5,-0.7 6.3,-0.7"/>
+  </g>
+</svg>
