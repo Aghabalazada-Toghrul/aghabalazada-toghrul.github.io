@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toghrul Aghabalazada | Sales Manager & Microsoft Solutions</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Sales Manager at NOVUM Tech specializing in Microsoft Dynamics 365, Microsoft 365, Azure, and Power Platform solutions for B2B enterprises in Azerbaijan.">
+    <meta name="description" content="Sales Manager at NOVUM Tech specializing in Microsoft Dynamics 365, Microsoft 365, Azure, and Power Platform solutions for B2B enterprises in Azerbaijan, UAE, Bahrain, and Uzbekistan.">
     <meta name="author" content="Toghrul Aghabalazada">
-    <meta name="theme-color" content="#0F172A">
+    <meta name="theme-color" content="#0D2B75">
     <link rel="canonical" href="[ADD: canonical URL]">
     
     <!-- Google Fonts: Inter -->
@@ -20,7 +20,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
@@ -28,63 +27,148 @@
                         display: ['Inter', 'sans-serif'],
                     },
                     colors: {
+                        novum: {
+                            navy: '#0D2B75',     // Official Novum Tech primary brand navy (--primary-color-1)
+                            hover: '#2A4CA3',    // Official Novum Tech hover blue (--primary-hover)
+                            dark: '#051634',     // Official Novum Tech heading dark navy (--text-heading-color)
+                            blue: '#1E56A0',     // Novum secondary gradient blue
+                            ice: '#E5F1FF',      // Official Novum Tech light blue section background (.bg-light-blue)
+                            soft: '#F4F7FB',     // Official Novum Tech soft off-white (--color-1)
+                            accent: '#0E59F2',   // Novum pill accent blue
+                        },
                         tech: {
-                            900: '#0F172A', // Deep slate
-                            800: '#1E293B',
+                            900: '#051634',
+                            800: '#0D2B75',
                             700: '#334155',
-                            blue: '#3B82F6',
-                            cyan: '#06B6D4',
-                            purple: '#8B5CF6',
+                            blue: '#0D2B75',
+                            cyan: '#0284C7',
+                            purple: '#4F46E5',
                         }
                     },
                     backgroundImage: {
                         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                        'tech-gradient': 'linear-gradient(to right, #3B82F6, #06B6D4)',
+                        'novum-gradient': 'linear-gradient(135deg, #0D2B75 0%, #1E56A0 100%)',
+                        'novum-hero': 'linear-gradient(135deg, #F5F9FF 0%, #E5F1FF 100%)',
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #0F172A; color: #CBD5E1; }
-        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .glass-panel:hover { border-color: rgba(59, 130, 246, 0.5); box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); transition: all 0.3s ease; }
-        .text-gradient { background: linear-gradient(to right, #60A5FA, #22D3EE); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        body {
+            background-color: #FFFFFF;
+            color: #334155;
+        }
+        /* NOVUM Tech clean white card styling */
+        .glass-panel {
+            background: #FFFFFF;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 10px 30px rgba(13, 43, 117, 0.06);
+            transition: all 0.3s ease;
+        }
+        .glass-panel:hover {
+            border-color: rgba(13, 43, 117, 0.35);
+            box-shadow: 0 18px 40px rgba(13, 43, 117, 0.12);
+        }
+        /* NOVUM Tech Services Card with top gradient bar on hover */
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #0D2B75 0%, #2A4CA3 50%, #00A4EF 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        /* NOVUM Tech Subtitle Pill (.subtitle-one) */
+        .novum-pill {
+            display: inline-block;
+            background-color: rgba(14, 89, 242, 0.102);
+            color: #0D2B75;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #0D2B75, #1E56A0, #0284C7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
         .delay-100 { transition-delay: 100ms; }
         .delay-200 { transition-delay: 200ms; }
         
-        /* Modern glowing timeline */
-        .timeline-line::before { content: ''; position: absolute; left: 7px; top: 2rem; bottom: 0; width: 2px; background: linear-gradient(to bottom, #3B82F6, rgba(59, 130, 246, 0.1)); z-index: 0; }
-        .timeline-dot { position: absolute; left: 0; top: 0.5rem; width: 16px; height: 16px; border-radius: 50%; background-color: #0F172A; border: 3px solid #3B82F6; box-shadow: 0 0 10px rgba(59,130,246,0.5); z-index: 10;}
+        /* NOVUM Tech Clean Timeline */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 2rem;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #0D2B75, rgba(13, 43, 117, 0.15));
+            z-index: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            border: 3.5px solid #0D2B75;
+            box-shadow: 0 0 0 4px rgba(13, 43, 117, 0.12);
+            z-index: 10;
+        }
+        /* NOVUM Tech Footer Top Gradient Border */
+        .novum-footer-border {
+            border-top: 4px solid;
+            border-image: linear-gradient(115deg, rgba(13, 43, 117, 0.93) 0%, rgba(6, 20, 89, 1) 70%, rgba(29, 33, 73, 1) 100%) 1;
+        }
     </style>
 </head>
-<body id="top" class="font-sans antialiased selection:bg-tech-blue selection:text-white relative overflow-x-hidden">
+<body id="top" class="font-sans antialiased selection:bg-novum-navy selection:text-white relative overflow-x-hidden">
 
-    <!-- Decorative background glow -->
-    <div class="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-tech-blue/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
-    <div class="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-tech-cyan/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-
-    <!-- Primary Navigation (Glassmorphism) -->
-    <header class="fixed w-full z-50 top-0 glass-panel border-b-0">
+    <!-- Primary Navigation (NOVUM Tech Crisp White Header) -->
+    <header class="fixed w-full z-50 top-0 bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-sm">
         <nav aria-label="Main Navigation" class="max-w-7xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-            <a href="#top" class="font-display font-bold text-xl text-white tracking-tight flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-sm">TA</div>
-                Toghrul Aghabalazada
+            <a href="#top" class="font-display font-bold text-xl text-novum-dark tracking-tight flex items-center gap-3">
+                <div class="w-9 h-9 rounded-lg bg-novum-navy flex items-center justify-center text-white text-sm font-bold shadow-sm">TA</div>
+                <span>Toghrul Aghabalazada</span>
             </a>
 
             <!-- Desktop Navigation Links -->
-            <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300" id="desktop-nav">
-                <a href="#solutions" class="hover:text-white transition-colors">Solutions</a>
-                <a href="#value" class="hover:text-white transition-colors">Approach</a>
-                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
-                <a href="#skills" class="hover:text-white transition-colors">Capabilities</a>
-                <a href="#contact" class="px-5 py-2.5 bg-white text-tech-900 rounded-full hover:bg-slate-200 transition-colors font-semibold shadow-[0_0_15px_rgba(255,255,255,0.2)]">Contact Me</a>
+            <div class="hidden lg:flex items-center gap-8 text-sm font-semibold text-novum-dark" id="desktop-nav">
+                <a href="#solutions" class="hover:text-novum-navy transition-colors">Solutions</a>
+                <a href="#value" class="hover:text-novum-navy transition-colors">Approach</a>
+                <a href="#experience" class="hover:text-novum-navy transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-novum-navy transition-colors">Capabilities</a>
+                <a href="#contact" class="px-6 py-2.5 bg-novum-navy text-white rounded-lg hover:bg-novum-hover transition-all font-semibold shadow-sm">Contact Me</a>
             </div>
 
             <!-- Mobile Hamburger Toggle Button -->
-            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
+            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 text-novum-dark hover:text-novum-navy focus:outline-none">
                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" id="menu-icon-open">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -92,57 +176,61 @@
         </nav>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden glass-panel border-t border-slate-700 px-6 py-4 space-y-2 absolute w-full">
-            <a href="#solutions" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Solutions</a>
-            <a href="#value" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Approach</a>
-            <a href="#experience" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Experience</a>
-            <a href="#skills" class="block py-3 text-sm font-medium text-slate-300 hover:text-white border-b border-slate-800">Capabilities</a>
-            <a href="#contact" class="block py-3 text-sm font-bold text-tech-cyan">Contact Me</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-4 space-y-2 absolute w-full shadow-lg">
+            <a href="#solutions" class="block py-3 text-sm font-semibold text-novum-dark hover:text-novum-navy border-b border-slate-100">Solutions</a>
+            <a href="#value" class="block py-3 text-sm font-semibold text-novum-dark hover:text-novum-navy border-b border-slate-100">Approach</a>
+            <a href="#experience" class="block py-3 text-sm font-semibold text-novum-dark hover:text-novum-navy border-b border-slate-100">Experience</a>
+            <a href="#skills" class="block py-3 text-sm font-semibold text-novum-dark hover:text-novum-navy border-b border-slate-100">Capabilities</a>
+            <a href="#contact" class="block py-3 text-sm font-bold text-novum-navy">Contact Me</a>
         </div>
     </header>
 
     <main id="main-content" class="relative z-10">
-        <!-- 1. Hero Section -->
-        <section aria-labelledby="hero-heading" class="pt-40 pb-20 md:pt-48 md:pb-32 relative">
-            <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <!-- 1. Hero Section (NOVUM Tech Soft Ice-Blue Gradient) -->
+        <section aria-labelledby="hero-heading" class="pt-36 pb-20 md:pt-44 md:pb-28 bg-novum-hero relative overflow-hidden border-b border-blue-100">
+            <!-- Subtle decorative light shapes -->
+            <div class="absolute top-[-15%] right-[-5%] w-[45%] h-[65%] bg-blue-200/40 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute bottom-[-15%] left-[-5%] w-[40%] h-[50%] bg-sky-200/40 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                     <div class="w-full lg:w-3/5 text-center lg:text-left reveal">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-slate-700 bg-slate-800/50 text-xs font-semibold text-slate-300 tracking-wide uppercase mb-6">
-                            <span class="w-2 h-2 rounded-full bg-tech-cyan animate-pulse"></span>
-                            Sales Manager at NOVUM Tech | Microsoft Solutions (Azerbaijan • UAE • Bahrain • Uzbekistan)
+                        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-blue-200 bg-white text-xs font-bold text-novum-navy tracking-wide uppercase mb-6 shadow-sm">
+                            <span class="w-2 h-2 rounded-full bg-novum-navy animate-pulse"></span>
+                            <span>Sales Manager at <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="underline hover:text-novum-hover transition-colors">NOVUM Tech</a> | Microsoft Solutions (Azerbaijan • UAE • Bahrain • Uzbekistan)</span>
                         </div>
                         
-                        <h1 id="hero-heading" class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight mb-6">
+                        <h1 id="hero-heading" class="font-display text-5xl md:text-6xl lg:text-7xl font-extrabold text-novum-dark tracking-tight leading-tight mb-6">
                             Driving <span class="text-gradient">Microsoft Cloud</span> & Dynamics 365 Adoption
                         </h1>
                         
-                        <p class="text-lg text-slate-400 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0 font-light">
-                            I help enterprises across <strong class="text-white font-medium">Azerbaijan, the UAE, Bahrain, and Uzbekistan</strong> adopt Dynamics 365, Microsoft 365, Azure, and Microsoft Fabric, from first demo to signed contract. Combining consultative discovery and commercial strategy, I connect operational challenges with scalable technology.
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
+                            I help enterprises across <strong class="text-novum-dark font-semibold">Azerbaijan, the UAE, Bahrain, and Uzbekistan</strong> adopt Dynamics 365, Microsoft 365, Azure, and Microsoft Fabric, from first demo to signed contract. Combining consultative discovery and commercial strategy, I connect operational challenges with scalable technology.
                         </p>
 
                         <!-- Regional Markets Served Pill Row -->
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6 text-xs">
-                            <span class="text-slate-500 font-semibold uppercase tracking-wider text-[11px] mr-1">Active Markets:</span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
-                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                            <span class="text-novum-navy font-bold uppercase tracking-wider text-[11px] mr-1">Active Markets:</span>
+                            <span class="px-3 py-1.5 rounded-lg bg-white border border-blue-200/80 text-novum-dark shadow-sm flex items-center gap-2 font-semibold">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-200 inline-block flex-shrink-0">
                                     <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#0092bc"/><rect y="200" width="1200" height="200" fill="#e4002b"/><rect y="400" width="1200" height="200" fill="#009639"/><circle cx="560" cy="300" r="90" fill="#fff"/><circle cx="588" cy="300" r="74" fill="#e4002b"/><polygon points="640,258 648,281 670,270 659,292 682,300 659,308 670,330 648,319 640,342 632,319 610,330 621,308 598,300 621,292 610,270 632,281" fill="#fff"/></svg>
                                 </span>
                                 Baku, Azerbaijan
                             </span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
-                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                            <span class="px-3 py-1.5 rounded-lg bg-white border border-blue-200/80 text-novum-dark shadow-sm flex items-center gap-2 font-semibold">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-200 inline-block flex-shrink-0">
                                     <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#00732f"/><rect y="200" width="1200" height="200" fill="#fff"/><rect y="400" width="1200" height="200" fill="#000"/><rect width="300" height="600" fill="#f00"/></svg>
                                 </span>
                                 Dubai, UAE
                             </span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
-                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                            <span class="px-3 py-1.5 rounded-lg bg-white border border-blue-200/80 text-novum-dark shadow-sm flex items-center gap-2 font-semibold">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-200 inline-block flex-shrink-0">
                                     <svg class="w-full h-full object-cover" viewBox="0 0 1000 600"><rect width="1000" height="600" fill="#ce1126"/><polygon points="0,0 260,0 360,60 260,120 360,180 260,240 360,300 260,360 360,420 260,480 360,540 260,600 0,600" fill="#fff"/></svg>
                                 </span>
                                 Manama, Bahrain
                             </span>
-                            <span class="px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-slate-300 flex items-center gap-2 font-medium">
-                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                            <span class="px-3 py-1.5 rounded-lg bg-white border border-blue-200/80 text-novum-dark shadow-sm flex items-center gap-2 font-semibold">
+                                <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-200 inline-block flex-shrink-0">
                                     <svg class="w-full h-full object-cover" viewBox="0 0 1000 500"><rect width="1000" height="160" fill="#0099b5"/><rect y="160" width="1000" height="10" fill="#ce1126"/><rect y="170" width="1000" height="160" fill="#fff"/><rect y="330" width="1000" height="10" fill="#ce1126"/><rect y="340" width="1000" height="160" fill="#1eb53a"/><circle cx="120" cy="80" r="48" fill="#fff"/><circle cx="136" cy="80" r="40" fill="#0099b5"/><g fill="#fff"><circle cx="210" cy="40" r="7"/><circle cx="235" cy="40" r="7"/><circle cx="260" cy="40" r="7"/><circle cx="185" cy="80" r="7"/><circle cx="210" cy="80" r="7"/><circle cx="235" cy="80" r="7"/><circle cx="260" cy="80" r="7"/><circle cx="160" cy="120" r="7"/><circle cx="185" cy="120" r="7"/><circle cx="210" cy="120" r="7"/><circle cx="235" cy="120" r="7"/><circle cx="260" cy="120" r="7"/></g></svg>
                                 </span>
                                 Tashkent, Uzbekistan
@@ -150,77 +238,115 @@
                         </div>
 
                         <!-- Languages Badge Row -->
-                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-10 text-xs font-medium">
-                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Azerbaijani (Native)</span>
-                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">English (Fluent)</span>
-                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Turkish (Fluent)</span>
-                            <span class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 border border-slate-700">Russian (Fluent)</span>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 mb-10 text-xs font-semibold">
+                            <span class="px-3.5 py-2 rounded-lg bg-novum-navy/10 text-novum-navy border border-novum-navy/20">Azerbaijani (Native)</span>
+                            <span class="px-3.5 py-2 rounded-lg bg-novum-navy/10 text-novum-navy border border-novum-navy/20">English (Fluent)</span>
+                            <span class="px-3.5 py-2 rounded-lg bg-novum-navy/10 text-novum-navy border border-novum-navy/20">Turkish (Fluent)</span>
+                            <span class="px-3.5 py-2 rounded-lg bg-novum-navy/10 text-novum-navy border border-novum-navy/20">Russian (Fluent)</span>
                         </div>
                         
-                        <!-- Hero CTA Buttons -->
+                        <!-- Hero CTA Buttons (NOVUM Tech Button Style) -->
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                            <a href="[ADD: Calendly or booking URL]" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all transform hover:-translate-y-1">
+                            <a href="mailto:toghrul.aghabalazada@novum.tech" class="px-8 py-4 bg-novum-navy text-white font-bold rounded-xl hover:bg-novum-hover hover:shadow-lg transition-all transform hover:-translate-y-0.5">
                                 Book a 20-minute call
                             </a>
-                            <a href="#solutions" class="px-8 py-4 bg-slate-800 text-white font-semibold rounded-full border border-slate-700 hover:bg-slate-700 transition-colors">
+                            <a href="#solutions" class="px-8 py-4 bg-white text-novum-navy font-bold rounded-xl border-2 border-novum-navy hover:bg-novum-navy hover:text-white transition-colors shadow-sm">
                                 Explore Solutions
                             </a>
                         </div>
                     </div>
                     
-                    <!-- Portrait with Modern Glow -->
+                    <!-- Portrait in Clean NOVUM Tech Corporate Frame -->
                     <div class="w-full lg:w-2/5 flex justify-center lg:justify-end reveal delay-100">
-                        <div class="relative w-72 h-72 md:w-80 md:h-[400px] rounded-3xl overflow-hidden p-1 bg-gradient-to-br from-blue-500/30 to-purple-500/30">
-                            <img src="photo.jpg" alt="Toghrul Aghabalazada - Sales Manager" class="w-full h-full object-cover rounded-3xl bg-slate-800 filter grayscale hover:grayscale-0 transition-all duration-500">
+                        <div class="relative w-72 h-72 md:w-80 md:h-[410px] rounded-3xl overflow-hidden p-2 bg-white shadow-[0_20px_50px_rgba(13,43,117,0.15)] border border-blue-100">
+                            <img src="photo.jpg" alt="Toghrul Aghabalazada - Sales Manager" class="w-full h-full object-cover rounded-2xl bg-slate-100 transition-all duration-500">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Stat Strip Directly Under Hero -->
-        <section aria-label="Key Career Statistics" class="py-12 border-y border-slate-800 bg-slate-900/50">
-            <div class="max-w-7xl mx-auto px-6 md:px-12 reveal">
+        <!-- 2. Stat Strip & NOVUM Tech Profile Directly Under Hero -->
+        <section aria-label="Key Career Statistics and NOVUM Tech Profile" class="py-12 border-b border-slate-200 bg-white">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 space-y-8 reveal">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center md:text-left">
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <p class="font-display text-4xl font-bold text-white mb-2">100<span class="text-tech-cyan">+</span></p>
-                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Corporate Clients Onboarded</p>
+                    <div class="glass-panel p-6 rounded-2xl border-t-4 border-t-novum-navy">
+                        <p class="font-display text-4xl font-extrabold text-novum-navy mb-1">100<span class="text-sky-600">+</span></p>
+                        <p class="text-xs uppercase tracking-wider font-bold text-slate-500">Corporate Clients Onboarded</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <p class="font-display text-4xl font-bold text-white mb-2">10 <span class="text-tech-blue text-2xl">Yrs</span></p>
-                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">In B2B & Hospitality</p>
+                    <div class="glass-panel p-6 rounded-2xl border-t-4 border-t-novum-hover">
+                        <p class="font-display text-4xl font-extrabold text-novum-navy mb-1">10 <span class="text-novum-hover text-2xl">Yrs</span></p>
+                        <p class="text-xs uppercase tracking-wider font-bold text-slate-500">In B2B & Hospitality</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <p class="font-display text-4xl font-bold text-white mb-2">4 <span class="text-tech-purple text-2xl">Langs</span></p>
-                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">AZ Native | EN, TR, RU</p>
+                    <div class="glass-panel p-6 rounded-2xl border-t-4 border-t-sky-600">
+                        <p class="font-display text-4xl font-extrabold text-novum-navy mb-1">4 <span class="text-sky-600 text-2xl">Langs</span></p>
+                        <p class="text-xs uppercase tracking-wider font-bold text-slate-500">AZ Native | EN, TR, RU</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl flex flex-col justify-center">
-                        <p class="font-display text-lg font-bold text-tech-cyan mb-2">[ADD: certification]</p>
-                        <p class="text-xs uppercase tracking-wider font-semibold text-slate-400">Industry Validation</p>
+                    <a href="https://learn.microsoft.com/en-us/users/toghrulaghabalazadanovumllc-8310/training" target="_blank" rel="noopener noreferrer" class="glass-panel p-6 rounded-2xl border-t-4 border-t-novum-navy flex flex-col justify-center group hover:-translate-y-0.5 transition-all">
+                        <p class="font-display text-lg font-extrabold text-novum-navy group-hover:text-novum-hover mb-1 flex items-center justify-center md:justify-start gap-2 transition-colors">
+                            <span>My Microsoft Certificates</span>
+                            <svg class="w-4 h-4 text-sky-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </p>
+                        <p class="text-xs uppercase tracking-wider font-bold text-slate-500">Microsoft Learn Profile</p>
+                    </a>
+                </div>
+
+                <!-- NOVUM Tech Company Profile Card -->
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border-l-4 border-l-novum-navy bg-gradient-to-r from-white via-white to-novum-ice/40 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                        <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white p-3 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 hover:border-novum-navy transition-colors">
+                            <img src="logos/novum.png" alt="NOVUM Tech Logo" class="max-w-full max-h-full object-contain">
+                        </a>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2.5 mb-2">
+                                <span class="novum-pill !py-1 !px-3 !text-[11px]">Microsoft Solutions Partner</span>
+                                <span class="text-xs font-semibold text-slate-500">Data &amp; AI • Business Applications • Modern Workplace</span>
+                            </div>
+                            <h3 class="font-display text-xl sm:text-2xl font-extrabold text-novum-dark mb-1.5">
+                                <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="hover:text-novum-navy transition-colors">NOVUM Information Technology (NOVUM Tech)</a>
+                            </h3>
+                            <p class="text-sm text-slate-600 max-w-3xl leading-relaxed">
+                                NOVUM Tech delivers AI-powered digital solutions, Microsoft Cloud services (Dynamics 365, Azure, Microsoft 365, Power BI, and Microsoft Fabric), and custom enterprise software that streamline operations and support scalable business growth across the UAE, Azerbaijan, Bahrain, and Uzbekistan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 w-full lg:w-auto flex-shrink-0">
+                        <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 bg-novum-navy text-white text-sm font-bold rounded-xl hover:bg-novum-hover hover:shadow-md transition-all flex items-center justify-center gap-2 whitespace-nowrap">
+                            <span>novum.tech Webpage</span>
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/novum" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3 bg-white text-novum-navy text-sm font-bold rounded-xl border border-blue-200 hover:bg-novum-ice transition-colors flex items-center justify-center gap-2 whitespace-nowrap">
+                            <svg class="w-4 h-4 text-novum-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>NOVUM Profile</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Global Reach, Local Insight Section -->
-        <section id="reach" aria-label="Global Reach, Local Insight" class="py-16 border-b border-slate-800 bg-slate-900/30 relative">
+        <section id="reach" aria-label="Global Reach, Local Insight" class="py-20 border-b border-slate-200 bg-novum-soft relative">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6 reveal">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal">
                     <div>
-                        <p class="text-tech-cyan font-bold uppercase tracking-widest text-xs mb-2">Regional Operational Coverage</p>
-                        <h2 class="font-display text-3xl md:text-4xl font-bold text-white">Global Reach, Local Insight</h2>
+                        <span class="novum-pill mb-3">Regional Operational Coverage</span>
+                        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-novum-dark">Global Reach, Local Insight</h2>
                     </div>
-                    <p class="text-slate-400 text-sm max-w-xl font-light">
+                    <p class="text-slate-600 text-sm max-w-xl">
                         Delivering cross-border enterprise licensing, Dynamics 365 scoping, and Microsoft cloud solutions across 4 key regional markets.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
                     <!-- 1. Baku, Azerbaijan -->
-                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-blue-500/50 transition-all">
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
                         <div class="flex items-center gap-3.5 mb-4">
                             <!-- Azerbaijan SVG Flag -->
-                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                            <div class="w-11 h-7 rounded shadow-sm overflow-hidden border border-slate-200 flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="1200" height="200" fill="#0092bc"/>
                                     <rect y="200" width="1200" height="200" fill="#e4002b"/>
@@ -231,20 +357,20 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-white">Baku</h3>
-                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">Azerbaijan</p>
+                                <h3 class="font-bold text-lg text-novum-dark">Baku</h3>
+                                <p class="text-xs font-bold text-novum-navy uppercase tracking-wider">Azerbaijan</p>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        <p class="text-xs text-slate-600 leading-relaxed">
                             Primary operational headquarters. Advising local enterprises on Microsoft 365, Azure infrastructure, and Dynamics 365 Business Central deployments.
                         </p>
                     </div>
 
                     <!-- 2. Dubai, United Arab Emirates -->
-                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-cyan-500/50 transition-all">
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
                         <div class="flex items-center gap-3.5 mb-4">
                             <!-- UAE SVG Flag -->
-                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                            <div class="w-11 h-7 rounded shadow-sm overflow-hidden border border-slate-200 flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="1200" height="200" fill="#00732f"/>
                                     <rect y="200" width="1200" height="200" fill="#ffffff"/>
@@ -253,40 +379,40 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-white">Dubai</h3>
-                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">United Arab Emirates</p>
+                                <h3 class="font-bold text-lg text-novum-dark">Dubai</h3>
+                                <p class="text-xs font-bold text-novum-navy uppercase tracking-wider">United Arab Emirates</p>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        <p class="text-xs text-slate-600 leading-relaxed">
                             GCC enterprise hub. Scoping regional digital transformation initiatives, modern cloud migrations, and corporate volume licensing agreements.
                         </p>
                     </div>
 
                     <!-- 3. Manama, Bahrain -->
-                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-purple-500/50 transition-all">
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
                         <div class="flex items-center gap-3.5 mb-4">
                             <!-- Bahrain SVG Flag -->
-                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                            <div class="w-11 h-7 rounded shadow-sm overflow-hidden border border-slate-200 flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="1000" height="600" fill="#ce1126"/>
                                     <polygon points="0,0 260,0 360,60 260,120 360,180 260,240 360,300 260,360 360,420 260,480 360,540 260,600 0,600" fill="#ffffff"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-white">Manama</h3>
-                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">Bahrain</p>
+                                <h3 class="font-bold text-lg text-novum-dark">Manama</h3>
+                                <p class="text-xs font-bold text-novum-navy uppercase tracking-wider">Bahrain</p>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        <p class="text-xs text-slate-600 leading-relaxed">
                             Gulf commercial center. Providing Microsoft cloud infrastructure advisory, Power Platform workflow automation, and enterprise licensing.
                         </p>
                     </div>
 
                     <!-- 4. Tashkent, Uzbekistan -->
-                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/50 transition-all">
+                    <div class="glass-panel p-6 rounded-2xl relative overflow-hidden group hover:-translate-y-1 transition-all">
                         <div class="flex items-center gap-3.5 mb-4">
                             <!-- Uzbekistan SVG Flag -->
-                            <div class="w-10 h-7 rounded shadow overflow-hidden border border-slate-700/80 flex-shrink-0">
+                            <div class="w-11 h-7 rounded shadow-sm overflow-hidden border border-slate-200 flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
                                     <rect width="1000" height="160" fill="#0099b5"/>
                                     <rect y="160" width="1000" height="10" fill="#ce1126"/>
@@ -303,11 +429,11 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-white">Tashkent</h3>
-                                <p class="text-xs font-semibold text-tech-cyan uppercase tracking-wider">Uzbekistan</p>
+                                <h3 class="font-bold text-lg text-novum-dark">Tashkent</h3>
+                                <p class="text-xs font-bold text-novum-navy uppercase tracking-wider">Uzbekistan</p>
                             </div>
                         </div>
-                        <p class="text-xs text-slate-400 font-light leading-relaxed">
+                        <p class="text-xs text-slate-600 leading-relaxed">
                             Central Asian growth market. Guiding corporate organizations through ERP modernization, CRM implementation, and unified Fabric analytics.
                         </p>
                     </div>
@@ -315,102 +441,102 @@
             </div>
         </section>
 
-        <!-- 3. Microsoft Solutions I Work With Section -->
-        <section id="solutions" aria-labelledby="solutions-heading" class="py-24 relative">
+        <!-- 3. Microsoft Solutions I Work With Section (Exact NOVUM Tech Ice-Blue Services Grid Style) -->
+        <section id="solutions" aria-labelledby="solutions-heading" class="py-24 bg-novum-ice relative border-b border-blue-100">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
                 <div class="mb-16 text-center max-w-3xl mx-auto reveal">
-                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Technology Portfolio</p>
-                    <h2 id="solutions-heading" class="font-display text-4xl md:text-5xl font-bold text-white mb-6">Microsoft Solutions I Work With</h2>
-                    <p class="text-slate-400 text-lg font-light">
+                    <span class="novum-pill mb-3">Technology Portfolio</span>
+                    <h2 id="solutions-heading" class="font-display text-4xl md:text-5xl font-extrabold text-novum-dark mb-5">Microsoft Solutions I Work With</h2>
+                    <p class="text-slate-600 text-lg">
                         Connecting enterprise business requirements with Microsoft cloud infrastructure, business applications, and modern workplace platforms.
                     </p>
                 </div>
 
-                <!-- Dark Grid Cards -->
+                <!-- NOVUM Tech White Service Cards on Ice-Blue Background -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
                     
                     <!-- 1. Dynamics 365 -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Dynamics 365</h3>
-                        <p class="text-sm text-slate-400 font-light">I guide organizations through ERP and CRM evaluations (Business Central, Sales, Customer Service), defining scopes and leading demos.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Dynamics 365</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I guide organizations through ERP and CRM evaluations (Business Central, Sales, Customer Service), defining scopes and leading demos.</p>
                     </div>
 
                     <!-- 2. Microsoft 365 -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-red-500/20 text-red-400 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Microsoft 365</h3>
-                        <p class="text-sm text-slate-400 font-light">I structure enterprise workplace licensing and deployment—enabling teams with secure collaborative tools including Teams and SharePoint.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Microsoft 365</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I structure enterprise workplace licensing and deployment—enabling teams with secure collaborative tools including Teams and SharePoint.</p>
                     </div>
 
                     <!-- 3. Microsoft Azure -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-blue-400/20 text-blue-300 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Microsoft Azure</h3>
-                        <p class="text-sm text-slate-400 font-light">I help businesses architect and execute cloud migrations, optimizing server infrastructure, data security, and operational scalability.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Microsoft Azure</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I help businesses architect and execute cloud migrations, optimizing server infrastructure, data security, and operational scalability.</p>
                     </div>
 
                     <!-- 4. Microsoft Fabric -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Microsoft Fabric</h3>
-                        <p class="text-sm text-slate-400 font-light">I assist enterprises in consolidating data estates into Microsoft Fabric—unifying data engineering, data warehousing, and real-time analytics in an all-in-one platform.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Microsoft Fabric</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I assist enterprises in consolidating data estates into Microsoft Fabric—unifying data engineering, data warehousing, and real-time analytics in an all-in-one platform.</p>
                     </div>
 
                     <!-- 5. Power BI Consulting -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-yellow-500/20 text-yellow-400 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Power BI Consulting</h3>
-                        <p class="text-sm text-slate-400 font-light">I help business leaders transform fragmented operational data into interactive executive dashboards, enabling faster, data-driven decisions.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Power BI Consulting</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I help business leaders transform fragmented operational data into interactive executive dashboards, enabling faster, data-driven decisions.</p>
                     </div>
 
                     <!-- 6. Data Warehouse -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-500 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Data Warehouse</h3>
-                        <p class="text-sm text-slate-400 font-light">I assist organizations in centralizing disparate data sources into modern enterprise repositories and structured reporting architectures.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Data Warehouse</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I assist organizations in centralizing disparate data sources into modern enterprise repositories and structured reporting architectures.</p>
                     </div>
 
                     <!-- 7. Artificial Intelligence & IoT -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Artificial Intelligence & IoT</h3>
-                        <p class="text-sm text-slate-400 font-light">I introduce applied cognitive AI, Copilot, and smart IoT integrations into commercial operations to automate manual processes.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Artificial Intelligence & IoT</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I introduce applied cognitive AI, Copilot, and smart IoT integrations into commercial operations to automate manual processes.</p>
                     </div>
 
                     <!-- 8. Software Development -->
-                    <div class="glass-panel p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
-                        <div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center mb-6">
+                    <div class="glass-panel service-card p-8 rounded-2xl group hover:-translate-y-2 transition-transform duration-300">
+                        <div class="w-12 h-12 rounded-xl bg-novum-ice text-novum-navy flex items-center justify-center mb-6 group-hover:bg-novum-navy group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                         </div>
-                        <h3 class="font-bold text-xl text-white mb-3">Software Development</h3>
-                        <p class="text-sm text-slate-400 font-light">I coordinate tailored enterprise application development, aligning modern architecture and business requirements into production-ready software.</p>
+                        <h3 class="font-bold text-xl text-novum-navy mb-3">Software Development</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">I coordinate tailored enterprise application development, aligning modern architecture and business requirements into production-ready software.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 4. How I Create Business Value Section -->
-        <section id="value" aria-labelledby="value-heading" class="py-24 relative bg-slate-900/50 border-t border-slate-800">
+        <section id="value" aria-labelledby="value-heading" class="py-24 relative bg-white border-b border-slate-200">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
                 <div class="mb-16 text-center max-w-3xl mx-auto reveal">
-                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Commercial Approach</p>
-                    <h2 id="value-heading" class="font-display text-4xl md:text-5xl font-bold text-white mb-6">How I Create Business Value</h2>
-                    <p class="text-slate-400 text-lg font-light">
+                    <span class="novum-pill mb-3">Commercial Approach</span>
+                    <h2 id="value-heading" class="font-display text-4xl md:text-5xl font-extrabold text-novum-dark mb-5">How I Create Business Value</h2>
+                    <p class="text-slate-600 text-lg">
                         A structured methodology for qualifying opportunities, aligning technology with strategic goals, and delivering sustainable enterprise outcomes.
                     </p>
                 </div>
@@ -418,49 +544,49 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
                     <!-- Cards -->
                     <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-red-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                        <span class="text-sm font-bold text-slate-500 mb-4">01.</span>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Discover</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-novum-navy"></div>
+                        <span class="text-sm font-extrabold text-novum-navy/60 mb-3">01.</span>
+                        <h3 class="font-display font-bold text-2xl text-novum-dark mb-3">Discover</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
                             Thoroughly assess customer business challenges, current IT architecture, operational pain points, and strategic commercial objectives.
                         </p>
                     </div>
 
                     <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-cyan-400 opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                        <span class="text-sm font-bold text-slate-500 mb-4">02.</span>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Recommend</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-novum-hover"></div>
+                        <span class="text-sm font-extrabold text-novum-navy/60 mb-3">02.</span>
+                        <h3 class="font-display font-bold text-2xl text-novum-dark mb-3">Recommend</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
                             Map specific Microsoft technologies and Novum solutions to operational needs, outlining clear ROI, licensing models, and deployment scope.
                         </p>
                     </div>
 
                     <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-green-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                        <span class="text-sm font-bold text-slate-500 mb-4">03.</span>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Develop</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-sky-600"></div>
+                        <span class="text-sm font-extrabold text-novum-navy/60 mb-3">03.</span>
+                        <h3 class="font-display font-bold text-2xl text-novum-dark mb-3">Develop</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
                             Structure enterprise proposals, coordinate proof-of-concept demos with technical architects, align executive stakeholders, and negotiate agreements.
                         </p>
                     </div>
 
                     <div class="glass-panel p-8 rounded-2xl flex flex-col relative overflow-hidden group">
-                        <div class="absolute top-0 left-0 w-full h-1 bg-yellow-500 opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                        <span class="text-sm font-bold text-slate-500 mb-4">04.</span>
-                        <h3 class="font-display font-bold text-2xl text-white mb-3">Grow</h3>
-                        <p class="text-sm text-slate-400 leading-relaxed font-light">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-novum-navy"></div>
+                        <span class="text-sm font-extrabold text-novum-navy/60 mb-3">04.</span>
+                        <h3 class="font-display font-bold text-2xl text-novum-dark mb-3">Grow</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
                             Nurture executive client relationships, ensure post-deployment satisfaction, and identify continuous workload optimization opportunities.
                         </p>
                     </div>
                 </div>
 
-                <!-- Secondary CTA -->
-                <div class="mt-16 glass-panel rounded-3xl p-10 flex flex-col sm:flex-row items-center justify-between gap-8 reveal">
+                <!-- Secondary CTA (NOVUM Tech Royal Blue Banner Card) -->
+                <div class="mt-16 bg-novum-gradient rounded-3xl p-10 md:p-12 flex flex-col sm:flex-row items-center justify-between gap-8 shadow-[0_20px_45px_rgba(13,43,117,0.2)] reveal">
                     <div>
-                        <h3 class="font-display text-2xl font-bold text-white mb-2">Have a project? Let's talk.</h3>
-                        <p class="text-slate-400 font-light">Explore Dynamics 365 scoping, cloud licensing optimization, or digital workplace transformation.</p>
+                        <h3 class="font-display text-2xl md:text-3xl font-bold text-white mb-2">Have a project? Let's talk.</h3>
+                        <p class="text-blue-100">Explore Dynamics 365 scoping, cloud licensing optimization, or digital workplace transformation.</p>
                     </div>
-                    <a href="#contact" class="px-8 py-3 bg-white text-tech-900 font-bold rounded-full hover:bg-slate-200 transition-colors whitespace-nowrap">
+                    <a href="#contact" class="px-8 py-3.5 bg-white text-novum-navy font-bold rounded-xl hover:bg-blue-50 transition-colors whitespace-nowrap shadow-md">
                         Let's Talk
                     </a>
                 </div>
@@ -468,12 +594,12 @@
         </section>
 
         <!-- 5. Professional Experience Section -->
-        <section id="experience" aria-labelledby="experience-heading" class="py-24 relative border-t border-slate-800">
+        <section id="experience" aria-labelledby="experience-heading" class="py-24 relative bg-novum-soft border-b border-slate-200">
             <div class="max-w-4xl mx-auto px-6 md:px-12">
                 <div class="mb-16 reveal text-center md:text-left">
-                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Track Record</p>
-                    <h2 id="experience-heading" class="font-display text-4xl font-bold text-white">Professional Experience</h2>
-                    <p class="text-slate-400 mt-4 max-w-3xl leading-relaxed font-light">
+                    <span class="novum-pill mb-3">Track Record</span>
+                    <h2 id="experience-heading" class="font-display text-4xl font-extrabold text-novum-dark">Professional Experience</h2>
+                    <p class="text-slate-600 mt-4 max-w-3xl leading-relaxed">
                         Over 10 years of commercial and customer relationship experience—spanning enterprise B2B Microsoft solutions sales, high-value corporate travel partnerships, and client service management.
                     </p>
                 </div>
@@ -482,29 +608,34 @@
                     <!-- 1. NOVUM Tech -->
                     <div class="relative pl-10 md:pl-12 reveal">
                         <div class="timeline-dot"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group border-l-4 border-l-novum-navy">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-tech-cyan/50 transition-colors">
+                                    <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/novum.png" alt="NOVUM Tech" class="max-w-full max-h-full object-contain">
-                                    </div>
+                                    </a>
                                     <div>
-                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Sales Manager</h3>
-                                        <h4 class="text-tech-cyan font-semibold text-sm sm:text-base mt-1">NOVUM Tech</h4>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-novum-dark leading-tight">Sales Manager</h3>
+                                        <div class="flex items-center gap-2 mt-1">
+                                            <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="text-novum-navy font-bold text-sm sm:text-base hover:underline flex items-center gap-1.5">
+                                                <span>NOVUM Tech</span>
+                                                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-300 tracking-wider whitespace-nowrap self-start sm:self-center">May 2026 – Present</span>
+                                <span class="px-3.5 py-1.5 bg-novum-ice border border-blue-200 rounded-full text-xs font-bold text-novum-navy tracking-wider whitespace-nowrap self-start sm:self-center">May 2026 – Present</span>
                             </div>
-                            <p class="text-slate-300 leading-relaxed font-light mb-3">
+                            <p class="text-slate-600 leading-relaxed mb-3">
                                 Identifying enterprise B2B opportunities, advising on Microsoft volume licensing, presenting business transformation solutions, and coordinating Dynamics 365 ERP/CRM demonstrations. Focused on helping enterprises across Azerbaijan, UAE, Bahrain, and Uzbekistan modernize their operations through the Microsoft ecosystem.
                             </p>
-                            <ul class="space-y-2 text-sm text-slate-400 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>B2B enterprise solution scoping for Dynamics 365 (Business Central & Sales) and Power Platform.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Advising corporate accounts on Microsoft 365, Azure cloud migration, and volume licensing agreements.</span>
                                 </li>
                             </ul>
@@ -513,30 +644,30 @@
 
                     <!-- 2. YIĞIM -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #06B6D4; box-shadow: 0 0 10px rgba(6,182,212,0.4);"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #2A4CA3;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-tech-blue/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/yigim.svg" alt="YIĞIM" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Corporate Sales Manager</h3>
-                                        <h4 class="text-tech-blue font-semibold text-sm sm:text-base mt-1">YIĞIM</h4>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-novum-dark leading-tight">Corporate Sales Manager</h3>
+                                        <h4 class="text-novum-navy font-bold text-sm sm:text-base mt-1">YIĞIM</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">Feb 2025 – Apr 2026</span>
+                                <span class="px-3.5 py-1.5 bg-novum-ice border border-blue-200 rounded-full text-xs font-bold text-novum-navy tracking-wider whitespace-nowrap self-start sm:self-center">Feb 2025 – Apr 2026</span>
                             </div>
-                            <p class="text-slate-300 leading-relaxed font-light mb-3">
+                            <p class="text-slate-600 leading-relaxed mb-3">
                                 Directed end-to-end B2B sales cycles, onboarding over 100 corporate clients across hospitality, retail, and service sectors. Conducted solution presentations, negotiated enterprise contracts, and collaborated with cross-functional technical teams to deliver seamless client integrations.
                             </p>
-                            <ul class="space-y-2 text-sm text-slate-400 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Onboarded 100+ corporate clients through consultative sales discovery and personalized product demonstrations.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Led commercial contract negotiations and closed enterprise service agreements.</span>
                                 </li>
                             </ul>
@@ -545,32 +676,32 @@
 
                     <!-- 3. Silk Row Travel -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #60A5FA;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #2A4CA3;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-blue-400/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/silkrow.svg" alt="Silk Row Travel" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Corporate Sales Manager</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Silk Row Travel</h4>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-novum-dark leading-tight">Corporate Sales Manager</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">Silk Row Travel</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">07.08.2023 – 12.02.2025</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">07.08.2023 – 12.02.2025</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Led corporate sales initiatives and cultivated long-term client relationships across enterprise accounts.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
-                                    <span>Developed and managed a portfolio of corporate clients, leading to a <strong class="text-white font-medium">20% increase</strong> in business travel bookings within the first year.</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
+                                    <span>Developed and managed a portfolio of corporate clients, leading to a <strong class="text-novum-dark font-semibold">20% increase</strong> in business travel bookings within the first year.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
-                                    <span>Negotiated and secured long-term contracts with key corporate clients, contributing to <strong class="text-white font-medium">20% growth</strong> in annual revenue.</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
+                                    <span>Negotiated and secured long-term contracts with key corporate clients, contributing to <strong class="text-novum-dark font-semibold">20% growth</strong> in annual revenue.</span>
                                 </li>
                             </ul>
                         </div>
@@ -578,32 +709,32 @@
 
                     <!-- 4. PASHA Travel -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #60A5FA;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #2A4CA3;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-emerald-500/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/pashatravel.svg" alt="PASHA Travel" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-white leading-tight">Partnership Specialist</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">PASHA Travel</h4>
+                                        <h3 class="font-display text-xl sm:text-2xl font-bold text-novum-dark leading-tight">Partnership Specialist</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">PASHA Travel</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">13.06.2022 – 06.08.2023</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">13.06.2022 – 06.08.2023</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Progressed from partnership coordinator to specialist, overseeing vendor sourcing, price negotiation, contract management, and inventory control.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Collaborated with the sales department to optimize the overall sales process.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
-                                    <span>Implemented cost-saving measures through supplier negotiations and process improvements, resulting in an <strong class="text-white font-medium">18% reduction</strong> in procurement costs.</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
+                                    <span>Implemented cost-saving measures through supplier negotiations and process improvements, resulting in an <strong class="text-novum-dark font-semibold">18% reduction</strong> in procurement costs.</span>
                                 </li>
                             </ul>
                         </div>
@@ -611,27 +742,27 @@
 
                     <!-- 5. PMD Hospitality -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-slate-500 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/pmd.png" alt="PMD Hospitality" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Reservation Agent</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">PMD Hospitality</h4>
+                                        <h3 class="font-display text-xl font-bold text-novum-dark leading-tight">Reservation Agent</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">PMD Hospitality</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">17.07.2021 – 16.06.2022</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">17.07.2021 – 16.06.2022</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Streamlined room and amenity reservations process, ensuring timely delivery and customer satisfaction. Ensured timely and efficient reservation fulfilment with front desk and housekeeping teams.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Provided exceptional customer service by handling inquiries, resolving issues, and exceeding guest expectations.</span>
                                 </li>
                             </ul>
@@ -640,27 +771,27 @@
 
                     <!-- 6. Baku Marriott Hotel Boulevard -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-red-500/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/marriott.svg" alt="Baku Marriott Hotel Boulevard" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Guest Service Agent</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Baku Marriott Hotel Boulevard</h4>
+                                        <h3 class="font-display text-xl font-bold text-novum-dark leading-tight">Guest Service Agent</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">Baku Marriott Hotel Boulevard</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">17.07.2019 – 17.07.2021</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">17.07.2019 – 17.07.2021</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Provided exceptional customer service, addressing inquiries, requests, and concerns professionally.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Managed check-in/check-out processes, reservations, and offered information on hotel amenities and local attractions.</span>
                                 </li>
                             </ul>
@@ -669,27 +800,27 @@
 
                     <!-- 7. Hard Rock Cafe Baku -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-amber-500/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/hardrock.svg" alt="Hard Rock Cafe Baku" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl font-bold text-white leading-tight">HOST / RSA</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Hard Rock Cafe Baku</h4>
+                                        <h3 class="font-display text-xl font-bold text-novum-dark leading-tight">HOST / RSA</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">Hard Rock Cafe Baku</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">20.07.2018 – 17.07.2019</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">20.07.2018 – 17.07.2019</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Provided exceptional customer service, managing guest reception, seating, and reservation coordination in a high-volume environment.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Addressed guest requests professionally and upheld international brand service standards.</span>
                                 </li>
                             </ul>
@@ -698,27 +829,27 @@
 
                     <!-- 8. Islamic Solidarity Games -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-cyan-400/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/baku2017.svg" alt="Islamic Solidarity Games (Baku 2017)" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Guest Service Agent</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Islamic Solidarity Games (Baku 2017)</h4>
+                                        <h3 class="font-display text-xl font-bold text-novum-dark leading-tight">Guest Service Agent</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">Islamic Solidarity Games (Baku 2017)</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">01.04.2017 – 30.06.2017</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">01.04.2017 – 30.06.2017</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Welcomed international sports delegations and VIP attendees, coordinating arrivals, logistical transfers, and accommodation schedules.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Delivered multilingual customer service and on-site issue resolution during major international sporting operations.</span>
                                 </li>
                             </ul>
@@ -727,18 +858,18 @@
 
                     <!-- 9. Frriends Cafe -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
                                 <div>
-                                    <h3 class="font-display text-xl font-bold text-white">Sales Coordinator</h3>
-                                    <h4 class="text-slate-300 font-semibold mt-1">Frriends Cafe</h4>
+                                    <h3 class="font-display text-xl font-bold text-novum-dark">Sales Coordinator</h3>
+                                    <h4 class="text-novum-navy font-semibold mt-1">Frriends Cafe</h4>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">19.09.2016 – 31.03.2017</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">19.09.2016 – 31.03.2017</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>In direct touch with clients, managed reservations for private events, provided detailed menu information, and coordinated with kitchen staff.</span>
                                 </li>
                             </ul>
@@ -747,27 +878,27 @@
 
                     <!-- 10. Qafqaz Point Boutique Hotel -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-1.5 sm:p-2 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-yellow-500/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-1.5 sm:p-2 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/qafqaz.png" alt="Qafqaz Point Boutique Hotel" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Sales Coordinator</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Qafqaz Point Boutique Hotel</h4>
+                                        <h3 class="font-display text-xl font-bold text-novum-dark leading-tight">Sales Coordinator</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">Qafqaz Point Boutique Hotel</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">03.04.2016 – 15.09.2016</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">03.04.2016 – 15.09.2016</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
-                                    <span>Executed a data-driven sales approach, implementing a CRM system that increased customer acquisition by <strong class="text-white font-medium">25%</strong>.</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
+                                    <span>Executed a data-driven sales approach, implementing a CRM system that increased customer acquisition by <strong class="text-novum-dark font-semibold">25%</strong>.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Managed corporate account inquiries, conducted follow-ups, and coordinated room booking contracts.</span>
                                 </li>
                             </ul>
@@ -776,27 +907,27 @@
 
                     <!-- 11. Caspian Business Hotel -->
                     <div class="relative pl-10 md:pl-12 reveal">
-                        <div class="timeline-dot" style="border-color: #94A3B8;"></div>
-                        <div class="glass-panel p-6 sm:p-8 rounded-2xl opacity-90 hover:opacity-100 transition-opacity group">
+                        <div class="timeline-dot" style="border-color: #64748B;"></div>
+                        <div class="glass-panel p-6 sm:p-8 rounded-2xl group">
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-5 gap-4">
                                 <div class="flex items-center gap-3.5 sm:gap-4">
-                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-md flex items-center justify-center flex-shrink-0 border border-slate-700/60 overflow-hidden group-hover:border-amber-400/50 transition-colors">
+                                    <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-white p-2 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/caspian.svg" alt="Caspian Business Hotel" class="max-w-full max-h-full object-contain">
                                     </div>
                                     <div>
-                                        <h3 class="font-display text-xl font-bold text-white leading-tight">Sales Coordinator</h3>
-                                        <h4 class="text-slate-300 font-semibold text-sm sm:text-base mt-1">Caspian Business Hotel</h4>
+                                        <h3 class="font-display text-xl font-bold text-novum-dark leading-tight">Sales Coordinator</h3>
+                                        <h4 class="text-novum-navy font-semibold text-sm sm:text-base mt-1">Caspian Business Hotel</h4>
                                     </div>
                                 </div>
-                                <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded-full text-xs font-bold text-slate-400 tracking-wider whitespace-nowrap self-start sm:self-center">04.03.2015 – 29.02.2016</span>
+                                <span class="px-3.5 py-1.5 bg-slate-100 border border-slate-200 rounded-full text-xs font-bold text-slate-600 tracking-wider whitespace-nowrap self-start sm:self-center">04.03.2015 – 29.02.2016</span>
                             </div>
-                            <ul class="space-y-2 text-sm text-slate-300 font-light">
+                            <ul class="space-y-2 text-sm text-slate-600">
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Played a key role in developing and executing effective sales strategies and promotional campaigns to boost revenue and maximize occupancy rates.</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <span class="text-tech-cyan mt-1">•</span>
+                                    <span class="text-novum-navy font-bold mt-0.5">•</span>
                                     <span>Engaged corporate accounts and coordinated group booking agreements.</span>
                                 </li>
                             </ul>
@@ -807,48 +938,48 @@
         </section>
 
         <!-- 6. Skills, Education & Languages -->
-        <section id="skills" class="py-24 bg-slate-900/50 border-y border-slate-800">
+        <section id="skills" class="py-24 bg-white border-b border-slate-200">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
                 <div class="mb-16 reveal text-center md:text-left">
-                    <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-3">Capabilities</p>
-                    <h2 class="font-display text-4xl font-bold text-white">Skills, Education & Languages</h2>
+                    <span class="novum-pill mb-3">Capabilities</span>
+                    <h2 class="font-display text-4xl font-extrabold text-novum-dark">Skills, Education & Languages</h2>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Core Competencies & Software -->
                     <div class="glass-panel p-10 rounded-3xl reveal">
-                        <h3 class="font-display text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                            <svg class="w-6 h-6 text-tech-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        <h3 class="font-display text-2xl font-bold text-novum-dark mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-novum-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
                             Core Competencies
                         </h3>
                         <div class="flex flex-wrap gap-3 mb-10">
-                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">B2B Solution Selling</span>
-                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Enterprise Account Management</span>
-                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Contract Negotiation</span>
-                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Commercial Strategy</span>
-                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">ERP / CRM Demo Coordination</span>
-                            <span class="px-4 py-2 bg-slate-800 border border-slate-700 text-slate-300 rounded-lg text-sm">Cross-Functional Leadership</span>
+                            <span class="px-4 py-2 bg-novum-ice border border-blue-200/80 text-novum-navy font-semibold rounded-lg text-sm">B2B Solution Selling</span>
+                            <span class="px-4 py-2 bg-novum-ice border border-blue-200/80 text-novum-navy font-semibold rounded-lg text-sm">Enterprise Account Management</span>
+                            <span class="px-4 py-2 bg-novum-ice border border-blue-200/80 text-novum-navy font-semibold rounded-lg text-sm">Contract Negotiation</span>
+                            <span class="px-4 py-2 bg-novum-ice border border-blue-200/80 text-novum-navy font-semibold rounded-lg text-sm">Commercial Strategy</span>
+                            <span class="px-4 py-2 bg-novum-ice border border-blue-200/80 text-novum-navy font-semibold rounded-lg text-sm">ERP / CRM Demo Coordination</span>
+                            <span class="px-4 py-2 bg-novum-ice border border-blue-200/80 text-novum-navy font-semibold rounded-lg text-sm">Cross-Functional Leadership</span>
                         </div>
 
-                        <h3 class="font-display text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                            <svg class="w-6 h-6 text-tech-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                        <h3 class="font-display text-2xl font-bold text-novum-dark mb-6 flex items-center gap-3">
+                            <svg class="w-6 h-6 text-novum-hover" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                             Technology Platforms
                         </h3>
-                        <ul class="space-y-4 text-sm text-slate-400 font-light">
+                        <ul class="space-y-4 text-sm text-slate-600 font-medium">
                             <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-tech-blue shadow-[0_0_8px_#3B82F6]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-novum-navy"></div>
                                 <span>Microsoft Dynamics 365 (Business Central & CRM applications)</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-tech-cyan shadow-[0_0_8px_#06B6D4]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-novum-hover"></div>
                                 <span>Power Platform (Power BI, Power Apps, Power Automate)</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_#EF4444]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-sky-600"></div>
                                 <span>Microsoft 365 Enterprise Licensing & Modern Workplace</span>
                             </li>
                             <li class="flex items-center gap-3">
-                                <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_#22C55E]"></div>
+                                <div class="w-2.5 h-2.5 rounded-full bg-emerald-600"></div>
                                 <span>CRM Platforms (Salesforce, HubSpot)</span>
                             </li>
                         </ul>
@@ -857,34 +988,34 @@
                     <!-- Education & Languages -->
                     <div class="glass-panel p-10 rounded-3xl reveal delay-100 flex flex-col justify-between">
                         <div>
-                            <h3 class="font-display text-2xl font-bold text-white mb-6">Education</h3>
-                            <div class="mb-10 bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
-                                <h4 class="font-bold text-white text-lg">Azerbaijan Tourism and Management University</h4>
-                                <p class="text-slate-400 mt-2 font-light">Bachelor of Business Management (2013–2017)</p>
+                            <h3 class="font-display text-2xl font-bold text-novum-dark mb-6">Education</h3>
+                            <div class="mb-10 bg-novum-soft p-6 rounded-2xl border border-slate-200">
+                                <h4 class="font-bold text-novum-navy text-lg">Azerbaijan Tourism and Management University</h4>
+                                <p class="text-slate-600 mt-1.5 font-medium">Bachelor of Business Management (2013–2017)</p>
                             </div>
 
-                            <h3 class="font-display text-2xl font-bold text-white mb-6">Languages</h3>
+                            <h3 class="font-display text-2xl font-bold text-novum-dark mb-6">Languages</h3>
                             <div class="grid grid-cols-2 gap-4 text-sm">
-                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                                    <strong class="text-white block mb-1">Azerbaijani</strong> 
-                                    <span class="text-tech-cyan">Native</span>
+                                <div class="bg-novum-soft p-4 rounded-xl border border-slate-200">
+                                    <strong class="text-novum-dark block mb-1">Azerbaijani</strong> 
+                                    <span class="text-novum-navy font-semibold">Native</span>
                                 </div>
-                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                                    <strong class="text-white block mb-1">English</strong> 
-                                    <span class="text-slate-400">Fluent</span>
+                                <div class="bg-novum-soft p-4 rounded-xl border border-slate-200">
+                                    <strong class="text-novum-dark block mb-1">English</strong> 
+                                    <span class="text-slate-600 font-medium">Fluent</span>
                                 </div>
-                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                                    <strong class="text-white block mb-1">Turkish</strong> 
-                                    <span class="text-slate-400">Fluent</span>
+                                <div class="bg-novum-soft p-4 rounded-xl border border-slate-200">
+                                    <strong class="text-novum-dark block mb-1">Turkish</strong> 
+                                    <span class="text-slate-600 font-medium">Fluent</span>
                                 </div>
-                                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-                                    <strong class="text-white block mb-1">Russian</strong> 
-                                    <span class="text-slate-400">Fluent</span>
+                                <div class="bg-novum-soft p-4 rounded-xl border border-slate-200">
+                                    <strong class="text-novum-dark block mb-1">Russian</strong> 
+                                    <span class="text-slate-600 font-medium">Fluent</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-10 pt-6 border-t border-slate-800 text-xs text-slate-500 font-light">
+                        <div class="mt-10 pt-6 border-t border-slate-200 text-xs text-slate-500">
                             <p>Continuous professional development in B2B enterprise technology, commercial contract management, and Microsoft cloud solutions.</p>
                         </div>
                     </div>
@@ -892,59 +1023,90 @@
             </div>
         </section>
 
-        <!-- 7. Contact Section -->
-        <section id="contact" class="py-32 relative">
+        <!-- 7. Contact Section (NOVUM Tech Soft Ice-Blue Gradient Section) -->
+        <section id="contact" class="py-28 bg-novum-hero relative">
             <div class="max-w-4xl mx-auto px-6 md:px-12 text-center reveal">
-                <p class="text-tech-cyan font-bold uppercase tracking-widest text-sm mb-4">Initiate Conversation</p>
-                <h2 class="font-display text-5xl md:text-6xl font-bold text-white mb-6">Let's Discuss Solutions</h2>
-                <p class="text-slate-400 text-lg font-light mb-12">
+                <span class="novum-pill mb-4">Initiate Conversation</span>
+                <h2 class="font-display text-5xl md:text-6xl font-extrabold text-novum-dark mb-6">Let's Discuss Solutions</h2>
+                <p class="text-slate-600 text-lg mb-12 max-w-2xl mx-auto">
                     Whether you are evaluating Microsoft software licensing, planning an ERP implementation, or exploring new enterprise opportunities, I welcome meaningful professional dialogue.
                 </p>
 
                 <!-- Action Buttons -->
-                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                    <a href="[ADD: Calendly or booking URL]" class="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold rounded-full hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] transition-all">
+                <div class="flex flex-col sm:flex-row justify-center gap-5 mb-10">
+                    <a href="mailto:toghrul.aghabalazada@novum.tech" class="px-8 py-4 bg-novum-navy text-white font-bold rounded-xl hover:bg-novum-hover hover:shadow-lg transition-all">
                         Book a 20-minute call
                     </a>
-                    <a href="mailto:[ADD: name@yourdomain]" class="px-8 py-4 bg-slate-800 text-white font-semibold rounded-full border border-slate-700 hover:bg-slate-700 transition-colors">
+                    <a href="mailto:toghrulaghabalazada@gmail.com" class="px-8 py-4 bg-white text-novum-navy font-bold rounded-xl border-2 border-novum-navy hover:bg-novum-navy hover:text-white transition-colors shadow-sm">
                         Send an Email
                     </a>
                 </div>
 
+                <!-- Direct Email Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-14 text-left">
+                    <a href="mailto:toghrul.aghabalazada@novum.tech" class="glass-panel p-4 rounded-xl flex items-center gap-3.5 group hover:-translate-y-0.5 transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-novum-ice text-novum-navy flex items-center justify-center flex-shrink-0 group-hover:bg-novum-navy group-hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400">Work (NOVUM Tech)</span>
+                            <span class="block text-sm font-bold text-novum-dark group-hover:text-novum-navy truncate transition-colors">toghrul.aghabalazada@novum.tech</span>
+                        </div>
+                    </a>
+
+                    <a href="mailto:toghrulaghabalazada@gmail.com" class="glass-panel p-4 rounded-xl flex items-center gap-3.5 group hover:-translate-y-0.5 transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-novum-ice text-novum-navy flex items-center justify-center flex-shrink-0 group-hover:bg-novum-navy group-hover:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400">Personal Email</span>
+                            <span class="block text-sm font-bold text-novum-dark group-hover:text-novum-navy truncate transition-colors">toghrulaghabalazada@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+
                 <!-- Footer style links inside contact -->
-                <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-400 font-light pt-12 border-t border-slate-800">
-                    <a href="[ADD: cv.pdf]" download class="hover:text-tech-cyan transition-colors flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <div class="flex flex-wrap justify-center gap-8 text-sm text-slate-600 font-medium pt-12 border-t border-blue-200/80">
+                    <a href="https://novum.tech" target="_blank" rel="noopener noreferrer" class="hover:text-novum-navy transition-colors flex items-center gap-2 font-semibold text-novum-dark">
+                        <svg class="w-4 h-4 text-novum-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                        novum.tech
+                    </a>
+                    <a href="[ADD: cv.pdf]" download class="hover:text-novum-navy transition-colors flex items-center gap-2 font-semibold text-novum-dark">
+                        <svg class="w-4 h-4 text-novum-navy" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         Download CV
                     </a>
-                    <a href="https://www.linkedin.com/in/toghrul-aghabalazada-26249719a/" target="_blank" class="hover:text-tech-cyan transition-colors flex items-center gap-2">
-                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <a href="https://www.linkedin.com/in/toghrul-aghabalazada-26249719a/" target="_blank" class="hover:text-novum-navy transition-colors flex items-center gap-2 font-semibold text-novum-dark">
+                        <svg class="w-4 h-4 text-novum-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                         LinkedIn
                     </a>
                     <div class="flex items-center gap-3 flex-wrap justify-center">
-                        <span class="inline-flex items-center gap-1.5 text-slate-300">
-                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                        <span class="inline-flex items-center gap-1.5 text-novum-dark font-medium">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-300 inline-block flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#0092bc"/><rect y="200" width="1200" height="200" fill="#e4002b"/><rect y="400" width="1200" height="200" fill="#009639"/><circle cx="560" cy="300" r="90" fill="#fff"/><circle cx="588" cy="300" r="74" fill="#e4002b"/><polygon points="640,258 648,281 670,270 659,292 682,300 659,308 670,330 648,319 640,342 632,319 610,330 621,308 598,300 621,292 610,270 632,281" fill="#fff"/></svg>
                             </span>
                             Baku, Azerbaijan
                         </span>
-                        <span class="text-slate-600">•</span>
-                        <span class="inline-flex items-center gap-1.5 text-slate-300">
-                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                        <span class="text-slate-400">•</span>
+                        <span class="inline-flex items-center gap-1.5 text-novum-dark font-medium">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-300 inline-block flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1200 600"><rect width="1200" height="200" fill="#00732f"/><rect y="200" width="1200" height="200" fill="#fff"/><rect y="400" width="1200" height="200" fill="#000"/><rect width="300" height="600" fill="#f00"/></svg>
                             </span>
                             Dubai, UAE
                         </span>
-                        <span class="text-slate-600">•</span>
-                        <span class="inline-flex items-center gap-1.5 text-slate-300">
-                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                        <span class="text-slate-400">•</span>
+                        <span class="inline-flex items-center gap-1.5 text-novum-dark font-medium">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-300 inline-block flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1000 600"><rect width="1000" height="600" fill="#ce1126"/><polygon points="0,0 260,0 360,60 260,120 360,180 260,240 360,300 260,360 360,420 260,480 360,540 260,600 0,600" fill="#fff"/></svg>
                             </span>
                             Manama, Bahrain
                         </span>
-                        <span class="text-slate-600">•</span>
-                        <span class="inline-flex items-center gap-1.5 text-slate-300">
-                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-700 inline-block flex-shrink-0">
+                        <span class="text-slate-400">•</span>
+                        <span class="inline-flex items-center gap-1.5 text-novum-dark font-medium">
+                            <span class="w-4 h-2.5 rounded-xs overflow-hidden border border-slate-300 inline-block flex-shrink-0">
                                 <svg class="w-full h-full object-cover" viewBox="0 0 1000 500"><rect width="1000" height="160" fill="#0099b5"/><rect y="160" width="1000" height="10" fill="#ce1126"/><rect y="170" width="1000" height="160" fill="#fff"/><rect y="330" width="1000" height="10" fill="#ce1126"/><rect y="340" width="1000" height="160" fill="#1eb53a"/><circle cx="120" cy="80" r="48" fill="#fff"/><circle cx="136" cy="80" r="40" fill="#0099b5"/><g fill="#fff"><circle cx="210" cy="40" r="7"/><circle cx="235" cy="40" r="7"/><circle cx="260" cy="40" r="7"/><circle cx="185" cy="80" r="7"/><circle cx="210" cy="80" r="7"/><circle cx="235" cy="80" r="7"/><circle cx="260" cy="80" r="7"/><circle cx="160" cy="120" r="7"/><circle cx="185" cy="120" r="7"/><circle cx="210" cy="120" r="7"/><circle cx="235" cy="120" r="7"/><circle cx="260" cy="120" r="7"/></g></svg>
                             </span>
                             Tashkent, Uzbekistan
@@ -955,10 +1117,10 @@
         </section>
     </main>
 
-    <footer class="py-8 bg-slate-900 border-t border-slate-800 text-center text-xs text-slate-500">
+    <footer class="py-8 bg-white novum-footer-border text-center text-xs text-slate-500">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <p>Personal website. Not affiliated with or endorsed by Microsoft Corporation.</p>
-            <p>&copy; 2026 Toghrul Aghabalazada. All rights reserved.</p>
+            <p class="font-medium text-novum-dark">&copy; 2026 Toghrul Aghabalazada. All rights reserved.</p>
         </div>
     </footer>
 
