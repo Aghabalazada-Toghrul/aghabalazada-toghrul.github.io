@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://toghrul-aghabalazada.github.io/sitemap.xml
