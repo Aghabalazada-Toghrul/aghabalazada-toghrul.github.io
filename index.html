@@ -231,18 +231,18 @@
                         <div class="w-full flex justify-center lg:justify-end items-center gap-2 mb-4">
                             <span class="text-xs font-bold text-slate-500 uppercase tracking-wider mr-1">Language:</span>
                             <div class="inline-flex p-1 rounded-xl bg-white border border-blue-200/90 shadow-sm" id="lang-selector-group">
-                                <button type="button" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-novum-navy text-white shadow-xs cursor-pointer" data-lang="en">
+                                <a href="index.html" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-novum-navy text-white shadow-xs cursor-pointer inline-flex items-center" data-lang="en">
                                     English
-                                </button>
-                                <button type="button" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-700 hover:text-novum-navy hover:bg-blue-50/70 cursor-pointer" data-lang="az">
+                                </a>
+                                <a href="index_az.html" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-700 hover:text-novum-navy hover:bg-blue-50/70 cursor-pointer inline-flex items-center" data-lang="az">
                                     Azərbaycan
-                                </button>
-                                <button type="button" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-700 hover:text-novum-navy hover:bg-blue-50/70 cursor-pointer" data-lang="tr">
+                                </a>
+                                <a href="index_tr.html" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-700 hover:text-novum-navy hover:bg-blue-50/70 cursor-pointer inline-flex items-center" data-lang="tr">
                                     Türkçe
-                                </button>
-                                <button type="button" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-700 hover:text-novum-navy hover:bg-blue-50/70 cursor-pointer" data-lang="ru">
+                                </a>
+                                <a href="index_ru.html" class="lang-selector-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all text-slate-700 hover:text-novum-navy hover:bg-blue-50/70 cursor-pointer inline-flex items-center" data-lang="ru">
                                     Русский
-                                </button>
+                                </a>
                             </div>
                         </div>
 
@@ -331,14 +331,9 @@
         <!-- Global Reach, Local Insight Section -->
         <section id="reach" aria-label="Global Reach, Local Insight" class="py-20 border-b border-slate-200 bg-novum-soft relative">
             <div class="max-w-7xl mx-auto px-6 md:px-12">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal">
-                    <div>
-                        <span class="novum-pill mb-3">Regional Operational Coverage</span>
-                        <h2 class="font-display text-3xl md:text-4xl font-extrabold text-novum-dark">Global Reach, Local Insight</h2>
-                    </div>
-                    <p class="text-slate-600 text-sm max-w-xl">
-                        Delivering cross-border enterprise licensing, Dynamics 365 scoping, and Microsoft cloud solutions across 4 key regional markets.
-                    </p>
+                <div class="mb-12 reveal">
+                    <span class="novum-pill mb-3">Regional Operational Coverage</span>
+                    <h2 class="font-display text-3xl md:text-4xl font-extrabold text-novum-dark">Global Reach, Local Insight</h2>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal delay-100">
@@ -1141,13 +1136,20 @@
         // Language Switcher Interactive Selection
         const langBtns = document.querySelectorAll('.lang-selector-btn');
         langBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                langBtns.forEach(b => {
-                    b.classList.remove('bg-novum-navy', 'text-white', 'shadow-xs');
-                    b.classList.add('text-slate-700', 'hover:text-novum-navy', 'hover:bg-blue-50/70');
-                });
-                btn.classList.add('bg-novum-navy', 'text-white', 'shadow-xs');
-                btn.classList.remove('text-slate-700', 'hover:text-novum-navy', 'hover:bg-blue-50/70');
+            btn.addEventListener('click', (e) => {
+                const lang = btn.getAttribute('data-lang');
+                e.preventDefault();
+                localStorage.setItem('novum_lang', lang);
+                const hash = window.location.hash || '';
+                const pages = {
+                    en: 'index.html',
+                    az: 'index_az.html',
+                    tr: 'index_tr.html',
+                    ru: 'index_ru.html'
+                };
+                if (pages[lang]) {
+                    window.location.href = pages[lang] + hash;
+                }
             });
         });
 
