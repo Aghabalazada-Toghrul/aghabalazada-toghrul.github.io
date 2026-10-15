@@ -1,0 +1,38 @@
+{
+  "index.html": {
+    "btnText": "Chat on WhatsApp",
+    "cardLabel": "WhatsApp Direct",
+    "cardText": "Direct Chat & Inquiries",
+    "bookText": "Book a 20-minute call",
+    "emailText": "Send an Email",
+    "workLabel": "Work (NOVUM Tech)",
+    "personalLabel": "Personal Email"
+  },
+  "index_az.html": {
+    "btnText": "WhatsApp ilə əlaqə",
+    "cardLabel": "WhatsApp vasitəsilə",
+    "cardText": "Birbaşa mesaj və əlaqə",
+    "bookText": "20 dəqiqəlik görüş təyin edin",
+    "emailText": "E-poçt göndərin",
+    "workLabel": "İş E-poçtu (NOVUM Tech)",
+    "personalLabel": "Şəxsi E-poçt"
+  },
+  "index_tr.html": {
+    "btnText": "WhatsApp ile İletişim",
+    "cardLabel": "WhatsApp Doğrudan",
+    "cardText": "Hızlı Mesaj ve Bilgi",
+    "bookText": "20 dakikalık görüşme planlayın",
+    "emailText": "E-posta Gönderin",
+    "workLabel": "İş E-postası (NOVUM Tech)",
+    "personalLabel": "Kişisel E-posta"
+  },
+  "index_ru.html": {
+    "btnText": "Написать в WhatsApp",
+    "cardLabel": "WhatsApp напрямую",
+    "cardText": "Быстрая связь и чат",
+    "bookText": "Запланировать 20-минутный звонок",
+    "emailText": "Отправить письмо",
+    "workLabel": "Рабочая почта (NOVUM Tech)",
+    "personalLabel": "Личная почта"
+  }
+}
