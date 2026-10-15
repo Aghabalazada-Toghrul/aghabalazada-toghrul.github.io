@@ -1,0 +1,18 @@
+{
+  "index.html": {
+    "more": "View Earlier Experience (2015 – 2023) • 8 Prior Positions",
+    "less": "Show Less"
+  },
+  "index_az.html": {
+    "more": "Əvvəlki Təcrübəyə Baxın (2015 – 2023) • 8 Vəzifə",
+    "less": "Daha Az Göstər"
+  },
+  "index_tr.html": {
+    "more": "Önceki Deneyimleri Görün (2015 – 2023) • 8 Önceki Pozisyon",
+    "less": "Daha Az Göster"
+  },
+  "index_ru.html": {
+    "more": "Посмотреть предыдущий опыт (2015 – 2023) • 8 позиций",
+    "less": "Свернуть"
+  }
+}
