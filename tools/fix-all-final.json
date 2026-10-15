@@ -1,0 +1,22 @@
+{
+  "phone": "994702899778",
+  "displayPhone": "+994 70 289 97 78",
+  "pages": {
+    "index.html": {
+      "lang": "en",
+      "waText": "Hello%20Toghrul,%20I%20would%20like%20to%20discuss%20Microsoft%20solutions."
+    },
+    "index_az.html": {
+      "lang": "az",
+      "waText": "Salam%20Toghrul,%20Microsoft%20helleri%20haqqinda%20danismaq%20isterdim."
+    },
+    "index_tr.html": {
+      "lang": "tr",
+      "waText": "Merhaba%20Toghrul,%20Microsoft%20cozumleri%20hakkinda%20gorusmek%20istiyorum."
+    },
+    "index_ru.html": {
+      "lang": "ru",
+      "waText": "%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%A2%D0%BE%D0%B3%D1%80%D1%83%D0%BB!%20%D0%AF%20%D1%85%D0%BE%D1%82%D0%B5%D0%BB%20%D0%B1%D1%8B%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%20Microsoft."
+    }
+  }
+}
