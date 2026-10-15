@@ -608,7 +608,9 @@
                         </div>
                     </div>
 
-                    <!-- 4. PASHA Travel -->
+                                        <!-- Collapsible Earlier Roles (4 to 11) -->
+                    <div id="earlier-experience" class="hidden space-y-10 mt-10">
+<!-- 4. PASHA Travel -->
                     <div class="relative pl-7 sm:pl-10 md:pl-12 reveal">
                         <div class="timeline-dot" style="border-color: #2A4CA3;"></div>
                         <div class="glass-panel p-4 min-[400px]:p-6 sm:p-8 rounded-2xl group">
@@ -834,7 +836,18 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                    </div>
+
+                    <!-- Earlier Experience Expand Button (Option 1) -->
+                    <div class="relative pl-7 sm:pl-10 md:pl-12 pt-2">
+                        <button id="toggle-experience-btn" type="button" aria-expanded="false" aria-controls="earlier-experience" data-more-text="View Earlier Experience (2015 – 2023) • 8 Prior Positions" data-less-text="Show Less" class="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-white hover:bg-blue-50/70 border-2 border-dashed border-blue-200 hover:border-novum-navy text-novum-navy font-bold text-sm shadow-xs hover:shadow-md transition-all group cursor-pointer w-full justify-center">
+                            <span class="w-7 h-7 rounded-full bg-blue-50 text-novum-navy flex items-center justify-center group-hover:bg-novum-navy group-hover:text-white transition-all transform group-hover:scale-105">
+                                <svg class="w-4 h-4 transition-transform duration-300" id="experience-chevron" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                            </span>
+                            <span id="experience-btn-text">View Earlier Experience (2015 – 2023) • 8 Prior Positions</span>
+                        </button>
+                    </div>
+</div>
             </div>
         </section>
 
@@ -1111,6 +1124,34 @@
                 document.querySelectorAll('[id$="lang-menu-btn"]').forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
             }
         });
+    
+        // Experience Timeline Toggle (Option 1)
+        (function() {
+            var expBtn = document.getElementById('toggle-experience-btn');
+            var expContainer = document.getElementById('earlier-experience');
+            var expText = document.getElementById('experience-btn-text');
+            var expChevron = document.getElementById('experience-chevron');
+            if (!expBtn || !expContainer || !expText || !expChevron) return;
+
+            expBtn.addEventListener('click', function() {
+                var isHidden = expContainer.classList.contains('hidden');
+                if (isHidden) {
+                    expContainer.classList.remove('hidden');
+                    expBtn.setAttribute('aria-expanded', 'true');
+                    expChevron.classList.add('rotate-180');
+                    expText.textContent = expBtn.getAttribute('data-less-text') || 'Show Less';
+                    expContainer.querySelectorAll('.reveal').forEach(function(el) {
+                        el.classList.add('active');
+                    });
+                } else {
+                    expContainer.classList.add('hidden');
+                    expBtn.setAttribute('aria-expanded', 'false');
+                    expChevron.classList.remove('rotate-180');
+                    expText.textContent = expBtn.getAttribute('data-more-text') || 'View Earlier Experience';
+                    expBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        })();
     </script>
 </body>
 </html>
