@@ -1,6 +1,8 @@
 /** Tailwind config used by tools/build.ps1 (compiled ahead of time; no CDN needed). */
 module.exports = {
-  content: ['./index.html', './index_az.html', './index_tr.html', './index_ru.html'],
+  content: ['./index.html', './index_az.html', './index_tr.html', './index_ru.html', './assets/site.js'],
+  /* hover: styles only on devices that really hover, so taps on phones don't leave cards "stuck" lifted */
+  future: { hoverOnlyWhenSupported: true },
   theme: {
     extend: {
       fontFamily: {
