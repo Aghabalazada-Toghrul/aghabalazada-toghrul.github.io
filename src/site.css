@@ -407,8 +407,38 @@ a.glass-panel:active { transform: scale(0.985); transition-duration: var(--dur-1
   .timeline-line .glass-panel:hover { transform: translateY(-3px); }
 }
 
+/* ---- Accent palette --------------------------------------------------------
+   Four distinct Microsoft-family hues - brand navy, Microsoft blue, Fabric teal,
+   Dynamics purple - shared by the stats row and the approach steps so each card
+   has its own identity: top bar, numbers, glow and a faint wash all follow it. */
+.accent-set > :nth-child(1) { --accent: #0D2B75; --accent-2: #3D6FD6; --spot: 13 43 117; }
+.accent-set > :nth-child(2) { --accent: #0078D4; --accent-2: #40A6F5; --spot: 0 120 212; }
+.accent-set > :nth-child(3) { --accent: #038387; --accent-2: #00B7C3; --spot: 3 131 135; }
+.accent-set > :nth-child(4) { --accent: #6B47B8; --accent-2: #A07EE6; --spot: 107 71 184; }
+.accent-set > .glass-panel {
+  background-image: linear-gradient(180deg, rgb(var(--spot) / 0.05) 0%, rgb(var(--spot) / 0) 55%);
+}
+.accent-top { border-top-color: var(--accent); }
+.accent-set .stat-num > span,
+.accent-icon { color: var(--accent); }
+
 /* Stat counters */
 .stat-num { font-variant-numeric: tabular-nums; }
+
+/* WhatsApp / LinkedIn tiles: the icon box fills with the brand colour and the glyph turns white */
+.contact-icon {
+  transition:
+    background-color var(--dur-2) ease,
+    color var(--dur-2) ease,
+    transform 500ms var(--ease-spring),
+    box-shadow var(--dur-2) ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .group:hover > .contact-icon {
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: 0 10px 20px -8px rgb(var(--spot) / 0.6);
+  }
+}
 
 /* Product cards (Solutions grid) */
 .svc-card {
@@ -452,28 +482,32 @@ a.glass-panel:active { transform: scale(0.985); transition-duration: var(--dur-1
   font-weight: 800;
   letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
-  color: rgba(13, 43, 117, 0.2);
-  transition: color 500ms var(--ease-out);
+  color: var(--accent, #0D2B75);
+  opacity: 0.35;
+  transition: opacity 500ms var(--ease-out);
 }
 @supports ((-webkit-background-clip: text) or (background-clip: text)) {
   .step-num {
-    background: linear-gradient(135deg, #0D2B75 0%, #0078D4 100%);
+    background: linear-gradient(135deg, var(--accent, #0D2B75) 0%, var(--accent-2, #0078D4) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    opacity: 0.22;
-    transition: opacity 500ms var(--ease-out);
   }
 }
 .step-bar {
+  background: linear-gradient(90deg, var(--accent, #0D2B75), var(--accent-2, #0078D4));
   transform-origin: left center;
   transition: transform 600ms var(--ease-out), height var(--dur-2) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
   .step-card:hover { transform: translateY(-6px); }
-  .step-card:hover .step-num { opacity: 1; color: #0D2B75; }
+  .step-card:hover .step-num { opacity: 1; }
   .step-card:hover .step-bar { height: 0.5rem; }
+}
+/* Touch screens never get the hover state, so show the step colour more strongly up front */
+@media (hover: none) {
+  .step-num { opacity: 0.6; }
 }
 .js .reveal.grid:not(.active) .step-bar { transform: scaleX(0); }
 
