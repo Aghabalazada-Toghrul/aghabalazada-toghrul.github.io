@@ -601,10 +601,16 @@ a.glass-panel:active { transform: scale(0.985); transition-duration: var(--dur-1
     linear-gradient(to bottom, #000 70%, transparent 98%),
     linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
   -webkit-mask-composite: source-in;
+  -webkit-mask-repeat: no-repeat;
   mask-image:
     linear-gradient(to bottom, #000 70%, transparent 98%),
     linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
   mask-composite: intersect;
+  mask-repeat: no-repeat;
+  /* With two composited mask layers Chrome leaves the last sub-pixel row unmasked when the
+     image height is fractional, drawing a hairline under the portrait. Those edge pixels are
+     fully faded anyway, so clipping them off changes nothing else. */
+  clip-path: inset(0 1px 1px 1px);
 }
 .portrait-halo {
   position: absolute;
@@ -669,14 +675,36 @@ a.glass-panel:active { transform: scale(0.985); transition-duration: var(--dur-1
   background: #F4F7FC;
 }
 .hero-chip svg { width: 1.125rem; height: 1.125rem; display: block; }
-.hero-chip--1 { top: 16%; left: -2%; }
-.hero-chip--2 { top: 40%; right: -4%; animation-delay: -2s; }
-.hero-chip--3 { bottom: 20%; left: 2%; animation-delay: -4s; }
+.hero-chip--2 { animation-delay: -1.5s; }
+.hero-chip--3 { animation-delay: -3s; }
+.hero-chip--4 { animation-delay: -4.5s; }
+/* Placement follows the photo's silhouette (measured on the cut-out): the head fills about
+   29-68% of the width between 12% and 52% of the height, the shoulders start near 58%.
+   Chips therefore sit above the head, on the shoulders, or beside the head only where the
+   layout leaves real room - never across the face. */
+
+/* Phones + the narrow lg column: an orbit - two chips above the head, two on the shoulders */
+.hero-chip--1 { top: -4%; left: 0; }
+.hero-chip--2 { top: 0; right: 0; }
+.hero-chip--3 { top: 63%; left: 0; }
+.hero-chip--4 { top: 77%; right: 0; }
+/* Tablets: the portrait is centred with free space either side, so chips zigzag beside the head */
+@media (min-width: 640px) and (max-width: 1023.98px) {
+  .hero-chip--1 { top: 14%; left: -24%; }
+  .hero-chip--2 { top: 36%; right: -24%; }
+  .hero-chip--3 { top: 58%; left: -20%; }
+  .hero-chip--4 { top: 74%; right: -20%; }
+}
+/* Wide desktop: zigzag hugging the halo, clear of the face */
+@media (min-width: 1280px) {
+  .hero-chip--1 { top: 14%; left: -7%; }
+  .hero-chip--2 { top: 34%; right: -7%; }
+  .hero-chip--3 { top: 58%; left: -5%; }
+  .hero-chip--4 { top: 74%; right: -5%; }
+}
 @media (max-width: 420px) {
   .hero-chip { font-size: 0.75rem; padding: 0.375rem 0.75rem 0.375rem 0.375rem; }
   .hero-chip__icon { width: 1.5rem; height: 1.5rem; }
-  .hero-chip--1 { left: 0; }
-  .hero-chip--2 { right: 0; }
 }
 
 /* "Available" status dot with a soft radar ping */
