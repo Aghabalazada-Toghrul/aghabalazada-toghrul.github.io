@@ -1,0 +1,9 @@
+# Local tooling binaries
+tools/tailwindcss.exe
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
