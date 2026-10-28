@@ -21,6 +21,61 @@
     if (mq.addEventListener) mq.addEventListener('change', fn); else mq.addListener(fn);
   }
 
+  /* ---- Theme: light / dark ------------------------------------------------
+     The <head> bootstrap already set data-theme before first paint. Until the
+     visitor picks a theme it follows the OS/browser; a pick is remembered. */
+  var root = doc.documentElement;
+  var THEME_KEY = 'theme';
+  var THEME_COLORS = { light: '#0D2B75', dark: '#0A1122' };
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  var themeMeta = $('meta[name="theme-color"]');
+  var themeToggles = $$('[data-theme-toggle]');
+
+  function storedTheme() {
+    try {
+      var t = localStorage.getItem(THEME_KEY);
+      return t === 'light' || t === 'dark' ? t : null;
+    } catch (e) { return null; }
+  }
+  function currentTheme() { return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'; }
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    root.style.colorScheme = theme;
+    if (themeMeta) themeMeta.setAttribute('content', THEME_COLORS[theme]);
+    themeToggles.forEach(function (btn) {
+      // the label names the action, so it points at the other theme
+      var label = btn.getAttribute(theme === 'dark' ? 'data-label-light' : 'data-label-dark');
+      if (!label) return;
+      btn.setAttribute('aria-label', label);
+      btn.setAttribute('title', label);
+    });
+  }
+  function switchTheme(theme, origin) {
+    if (theme === currentTheme()) return;
+    if (!doc.startViewTransition || reduceMotion.matches) { applyTheme(theme); return; }
+    // circular reveal from the toggle that was pressed
+    var x = origin ? origin.x : window.innerWidth;
+    var y = origin ? origin.y : 0;
+    var r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+    root.style.setProperty('--vt-x', x + 'px');
+    root.style.setProperty('--vt-y', y + 'px');
+    root.style.setProperty('--vt-r', Math.ceil(r) + 'px');
+    doc.startViewTransition(function () { applyTheme(theme); });
+  }
+
+  applyTheme(currentTheme());
+  themeToggles.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* private mode: still switch */ }
+      var r = btn.getBoundingClientRect();
+      switchTheme(next, { x: r.left + r.width / 2, y: r.top + r.height / 2 });
+    });
+  });
+  onMediaChange(systemDark, function (e) {
+    if (!storedTheme()) switchTheme(e.matches ? 'dark' : 'light');
+  });
+
   /* ---- Menus: mobile navigation + language dropdowns --------------------- */
   var menuBtn = $('#mobile-menu-btn');
   var mobileMenu = $('#mobile-menu');

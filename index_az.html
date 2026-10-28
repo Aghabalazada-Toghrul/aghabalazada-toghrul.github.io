@@ -72,13 +72,13 @@
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
     <!-- Rendering consistency across browsers / in-app WebViews -->
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="light dark">
     <meta name="format-detection" content="telephone=no">
     <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/site.css?v=5">
-    <script src="assets/site.js?v=5" defer></script>
-    <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.siteReady)document.documentElement.classList.remove('js')},3000);</script>
+    <link rel="stylesheet" href="assets/site.css?v=6">
+    <script src="assets/site.js?v=6" defer></script>
+    <script>(function(d){var t;try{t=localStorage.getItem('theme')}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t);d.style.colorScheme=t;if(t==='dark'){var m=document.querySelector('meta[name=theme-color]');if(m)m.setAttribute('content','#0A1122')}d.classList.add('js');setTimeout(function(){if(!window.siteReady)d.classList.remove('js')},3000)})(document.documentElement);</script>
 </head>
 <body id="top" class="font-sans antialiased selection:bg-novum-navy selection:text-white relative overflow-x-hidden">
     <a href="#main-content" class="skip-link">Məzmuna keç</a>
@@ -99,6 +99,10 @@
                 <a href="#skills" class="nav-link hover:text-novum-navy">Bacarıqlar</a>
                 <a href="#contact" class="btn btn-primary px-6 py-2.5 bg-novum-navy text-white rounded-full hover:bg-novum-hover font-semibold">Əlaqə saxlayın</a>
                 <!-- Language Dropdown (Desktop) -->
+                <button type="button" class="theme-toggle" data-theme-toggle data-label-dark="Tünd temaya keç" data-label-light="Açıq temaya keç" aria-label="Tünd temaya keç" title="Tünd temaya keç">
+                    <svg class="theme-toggle__icon theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-toggle__icon theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
                 <div class="relative ml-1" id="lang-dropdown-wrapper">
                     <button id="lang-menu-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-50 hover:bg-blue-50/70 border border-slate-200 text-novum-dark font-bold text-xs transition-all shadow-xs cursor-pointer group">
                         <span class="w-6 h-[18px] rounded-[3px] overflow-hidden ring-1 ring-black/10 shadow-sm inline-flex flex-shrink-0"><svg class="w-full h-full block" viewBox="0 0 640 480" aria-hidden="true" focusable="false"><path fill="#3f9c35" d="M.1 0h640v480H.1z"/><path fill="#ed2939" d="M.1 0h640v320H.1z"/><path fill="#00b9e4" d="M.1 0h640v160H.1z"/><circle cx="304" cy="240" r="72" fill="#fff"/><circle cx="320" cy="240" r="60" fill="#ed2939"/><path fill="#fff" d="m384 200 7.7 21.5 20.6-9.8-9.8 20.7L424 240l-21.5 7.7 9.8 20.6-20.6-9.8L384 280l-7.7-21.5-20.6 9.8 9.8-20.6L344 240l21.5-7.7-9.8-20.6 20.6 9.8z"/></svg></span>
@@ -126,6 +130,10 @@
 
             <!-- Mobile Hamburger Toggle Button -->            <!-- Mobile Header Controls: Flag Dropdown + Hamburger -->
             <div class="flex items-center gap-1.5 sm:gap-2 lg:hidden flex-shrink-0">
+                <button type="button" class="theme-toggle" data-theme-toggle data-label-dark="Tünd temaya keç" data-label-light="Açıq temaya keç" aria-label="Tünd temaya keç" title="Tünd temaya keç">
+                    <svg class="theme-toggle__icon theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="theme-toggle__icon theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
                 <div class="relative" id="mobile-lang-dropdown-wrapper">
                     <button id="mobile-lang-menu-btn" type="button" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-novum-dark font-bold text-xs transition-all border border-slate-200 shadow-xs cursor-pointer">
                         <span class="w-6 h-[18px] rounded-[3px] overflow-hidden ring-1 ring-black/10 shadow-sm inline-flex flex-shrink-0"><svg class="w-full h-full block" viewBox="0 0 640 480" aria-hidden="true" focusable="false"><path fill="#3f9c35" d="M.1 0h640v480H.1z"/><path fill="#ed2939" d="M.1 0h640v320H.1z"/><path fill="#00b9e4" d="M.1 0h640v160H.1z"/><circle cx="304" cy="240" r="72" fill="#fff"/><circle cx="320" cy="240" r="60" fill="#ed2939"/><path fill="#fff" d="m384 200 7.7 21.5 20.6-9.8-9.8 20.7L424 240l-21.5 7.7 9.8 20.6-20.6-9.8L384 280l-7.7-21.5-20.6 9.8 9.8-20.6L344 240l21.5-7.7-9.8-20.6 20.6 9.8z"/></svg></span>
@@ -795,12 +803,12 @@
                                     <a href="https://telebesen.com" target="_blank" rel="noopener noreferrer" class="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-white p-1.5 sm:p-2.5 shadow-sm flex items-center justify-center flex-shrink-0 border border-slate-200 overflow-hidden group-hover:border-novum-navy transition-colors">
                                         <img src="logos/telebesen.png" alt="TələbəSən" class="max-w-full max-h-full object-contain" loading="lazy" decoding="async">
                                     </a>
-                                    <div>
+                                    <div class="min-w-0">
                                         <div class="flex items-center gap-2">
                                             <h3 class="font-display text-base min-[400px]:text-lg sm:text-2xl font-bold text-novum-dark leading-tight break-words">Baş Tərəfdaşlıq Direktoru (CPO)</h3>
                                             <span class="hidden min-[480px]:inline-block px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-50 text-novum-navy border border-blue-200">Rəhbərlik</span>
                                         </div>
-                                        <div class="flex items-center gap-2 mt-1">
+                                        <div class="flex flex-wrap items-center gap-x-2 gap-y-0.5 mt-1">
                                             <a href="https://telebesen.com" target="_blank" rel="noopener noreferrer" class="text-novum-navy font-bold text-sm sm:text-base hover:underline flex items-center gap-1.5">
                                                 <span>TələbəSən</span>
                                                 <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>

@@ -32,6 +32,7 @@ Copy-Item az.html, tr.html, ru.html dist\
 # assets actually used by the pages
 New-Item -ItemType Directory dist\assets | Out-Null
 Copy-Item assets\site.css, assets\site.js dist\assets\
+Copy-Item assets\*.vcf dist\assets\   # downloadable business card
 Copy-Item assets\fonts dist\assets\fonts -Recurse
 Copy-Item assets\img dist\assets\img -Recurse
 Copy-Item logos dist\logos -Recurse
