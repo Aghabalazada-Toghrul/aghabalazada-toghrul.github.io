@@ -7,11 +7,12 @@ ORG:NOVUM Tech
 TITLE:Sales Manager
 ROLE:Sales Manager
 TEL;TYPE=CELL,VOICE,PREF:+994702899778
+TEL;TYPE=WORK,VOICE:+994772803181
 EMAIL;TYPE=WORK,INTERNET:toghrul.aghabalazada@novum.tech
 EMAIL;TYPE=HOME,INTERNET:toghrulaghabalazada@gmail.com
 URL;TYPE=WORK:https://novum.tech
 URL;TYPE=Portfolio:https://aghabalazada-toghrul.github.io/
 URL;TYPE=LinkedIn:https://www.linkedin.com/in/toghrul-aghabalazada-26249719a/
-ADR;TYPE=WORK:;;Baku;Azerbaijan;;;
+ADR;TYPE=WORK:;;Neftchi Gurban str. 29, Bayil Plaza;Baku;AZ1003;Azerbaijan
 NOTE:Sales Manager at NOVUM Tech specializing in Microsoft Dynamics 365, Microsoft 365, Azure, and Power Platform enterprise solutions.
 END:VCARD
