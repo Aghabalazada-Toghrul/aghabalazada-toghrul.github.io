@@ -7,3 +7,19 @@ Thumbs.db
 
 # Temporary files
 *.tmp
+
+# Secrets and credentials - this repository is public, never commit these
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.publishsettings
+
+# Editor / AI-assistant / test-run local folders
+.vscode/
+.idea/
+.claude/
+.playwright-mcp/
