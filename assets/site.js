@@ -355,4 +355,187 @@
       };
     });
   }
+
+  /* ---- Smart Solution Cards: clickable inquiry modal (WhatsApp / Email) --- */
+  var solCards = $$('#solutions .svc-card');
+  if (solCards.length) {
+    var lang = (doc.documentElement.lang || 'en').toLowerCase().slice(0, 2);
+    var copyByLang = {
+      en: {
+        badge: 'Solution Inquiry',
+        msgLabel: 'Pre-filled message (you can edit it)',
+        msgTemplate: 'Hello Toghrul, I’d like to discuss {title} solutions for our business.',
+        subjTemplate: 'Inquiry: {title} – Microsoft Solutions',
+        waBtn: 'Send via WhatsApp',
+        mailBtn: 'Send via Email',
+        closeLabel: 'Close',
+        cardHint: 'Inquire about {title}'
+      },
+      az: {
+        badge: 'Həll Sorğusu',
+        msgLabel: 'Hazır mesaj (redaktə edə bilərsiniz)',
+        msgTemplate: 'Salam Toğrul, şirkətimiz üçün {title} həllərini müzakirə etmək istərdim.',
+        subjTemplate: 'Sorğu: {title} – Microsoft Həlləri',
+        waBtn: 'WhatsApp ilə göndər',
+        mailBtn: 'E-poçt ilə göndər',
+        closeLabel: 'Bağla',
+        cardHint: '{title} haqqında sorğu göndər'
+      },
+      ru: {
+        badge: 'Запрос по решению',
+        msgLabel: 'Готовое сообщение (можно изменить)',
+        msgTemplate: 'Здравствуйте, Тогрул! Хотел бы обсудить решения {title} для нашей компании.',
+        subjTemplate: 'Запрос: {title} – Решения Microsoft',
+        waBtn: 'Написать в WhatsApp',
+        mailBtn: 'Отправить по Email',
+        closeLabel: 'Закрыть',
+        cardHint: 'Узнать о {title}'
+      },
+      tr: {
+        badge: 'Çözüm Talebi',
+        msgLabel: 'Hazır mesaj (düzenleyebilirsiniz)',
+        msgTemplate: 'Merhaba Toghrul, şirketimiz için {title} çözümlerini görüşmek istiyorum.',
+        subjTemplate: 'Talep: {title} – Microsoft Çözümleri',
+        waBtn: 'WhatsApp ile Gönder',
+        mailBtn: 'E-posta ile Gönder',
+        closeLabel: 'Kapat',
+        cardHint: '{title} hakkında bilgi al'
+      }
+    };
+    var t = copyByLang[lang] || copyByLang.en;
+    var waBase = waSource ? waSource.href.split('?')[0] : 'https://wa.me/994772803181';
+    var mailSource = $('#contact a[href^="mailto:toghrul.aghabalazada@novum.tech"]');
+    var mailBase = mailSource ? mailSource.href.split('?')[0] : 'mailto:toghrul.aghabalazada@novum.tech';
+
+    var backdrop = doc.createElement('div');
+    backdrop.className = 'sol-modal-backdrop';
+    backdrop.setAttribute('role', 'dialog');
+    backdrop.setAttribute('aria-modal', 'true');
+    backdrop.setAttribute('aria-hidden', 'true');
+    backdrop.setAttribute('aria-labelledby', 'sol-modal-title');
+    backdrop.innerHTML =
+      '<div class="sol-modal">' +
+        '<div class="sol-modal__bar"></div>' +
+        '<div class="sol-modal__body">' +
+          '<div class="sol-modal__head">' +
+            '<div class="sol-modal__icon" aria-hidden="true"></div>' +
+            '<div class="min-w-0">' +
+              '<span class="sol-modal__badge"></span>' +
+              '<h3 class="sol-modal__title" id="sol-modal-title"></h3>' +
+              '<p class="sol-modal__sub"></p>' +
+            '</div>' +
+            '<button type="button" class="sol-modal__close" aria-label="' + t.closeLabel + '">' +
+              '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>' +
+            '</button>' +
+          '</div>' +
+          '<label class="sol-modal__label" for="sol-modal-msg"></label>' +
+          '<textarea id="sol-modal-msg" class="sol-modal__textarea" rows="3"></textarea>' +
+          '<div class="sol-modal__actions">' +
+            '<a class="sol-modal__btn sol-modal__btn--wa" target="_blank" rel="noopener noreferrer"></a>' +
+            '<a class="sol-modal__btn sol-modal__btn--mail"></a>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    doc.body.appendChild(backdrop);
+
+    var modalEl = $('.sol-modal', backdrop);
+    var iconBox = $('.sol-modal__icon', backdrop);
+    var badgeEl = $('.sol-modal__badge', backdrop);
+    var titleEl = $('.sol-modal__title', backdrop);
+    var subEl = $('.sol-modal__sub', backdrop);
+    var labelEl = $('.sol-modal__label', backdrop);
+    var msgInput = $('#sol-modal-msg', backdrop);
+    var waBtn = $('.sol-modal__btn--wa', backdrop);
+    var mailBtn = $('.sol-modal__btn--mail', backdrop);
+    var closeBtn = $('.sol-modal__close', backdrop);
+
+    badgeEl.textContent = t.badge;
+    labelEl.textContent = t.msgLabel;
+    waBtn.innerHTML =
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>' +
+      '<span>' + t.waBtn + '</span>';
+    mailBtn.innerHTML =
+      '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>' +
+      '<span>' + t.mailBtn + '</span>';
+
+    var activeSubject = '';
+    var lastTrigger = null;
+
+    function syncLinks() {
+      var msg = msgInput.value.trim();
+      waBtn.href = waBase + '?text=' + encodeURIComponent(msg);
+      mailBtn.href = mailBase + '?subject=' + encodeURIComponent(activeSubject) + '&body=' + encodeURIComponent(msg);
+    }
+    msgInput.addEventListener('input', syncLinks);
+
+    function openSolutionModal(card) {
+      var h3 = $('h3', card);
+      var sub = $('span', card);
+      var bar = $('.svc-bar', card);
+      var srcIcon = $('.svc-icon svg, .svc-icon img', card);
+      var title = h3 ? h3.textContent.trim() : 'Microsoft Solutions';
+      var subtitle = sub ? sub.textContent.trim() : '';
+      var accent = (bar && bar.style.backgroundColor) || '#0D2B75';
+
+      lastTrigger = card;
+      modalEl.style.setProperty('--sol-accent', accent);
+      titleEl.textContent = title;
+      subEl.textContent = subtitle;
+      iconBox.innerHTML = '';
+      if (srcIcon) {
+        var cloned = srcIcon.cloneNode(true);
+        cloned.style.width = '28px';
+        cloned.style.height = '28px';
+        iconBox.appendChild(cloned);
+      }
+
+      activeSubject = t.subjTemplate.replace('{title}', title);
+      msgInput.value = t.msgTemplate.replace('{title}', title);
+      syncLinks();
+
+      backdrop.classList.add('is-open');
+      backdrop.setAttribute('aria-hidden', 'false');
+      setTimeout(function () { msgInput.focus(); }, 60);
+    }
+
+    function closeSolutionModal() {
+      if (!backdrop.classList.contains('is-open')) return;
+      backdrop.classList.remove('is-open');
+      backdrop.setAttribute('aria-hidden', 'true');
+      if (lastTrigger) {
+        lastTrigger.focus();
+        lastTrigger = null;
+      }
+    }
+
+    closeBtn.addEventListener('click', closeSolutionModal);
+    backdrop.addEventListener('click', function (e) {
+      if (e.target === backdrop) closeSolutionModal();
+    });
+    doc.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && backdrop.classList.contains('is-open')) closeSolutionModal();
+    });
+
+    solCards.forEach(function (card) {
+      var h3 = $('h3', card);
+      var title = h3 ? h3.textContent.trim() : '';
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      if (title) card.setAttribute('aria-label', t.cardHint.replace('{title}', title));
+
+      var arrow = doc.createElement('span');
+      arrow.className = 'svc-arrow';
+      arrow.setAttribute('aria-hidden', 'true');
+      arrow.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>';
+      card.appendChild(arrow);
+
+      card.addEventListener('click', function () { openSolutionModal(card); });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openSolutionModal(card);
+        }
+      });
+    });
+  }
 })();
